@@ -1,0 +1,11 @@
+@import "../bower_components/breakpoint-sass/stylesheets/breakpoint";
+body {
+  background: yellowgreen;
+}
+#tree {
+  width: 200px;
+  height: 200px;
+  border-radius: 15%;
+  background: palevioletred;
+  border: solid 1px #000;
+}
