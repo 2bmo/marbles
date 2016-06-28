@@ -1,0 +1,339 @@
+@font-face {
+  font-family: "Lato";
+  src: url("../font/Lato/Lato-Regular.woff2") format('woff2'),
+  url("../font/Lato/Lato-Regular.woff") format('woff'),
+  url("../font/Lato/Lato-Regular.ttf") format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("../font/Lato/Lato-Bold.woff2") format('woff2'),
+  url("../font/Lato/Lato-Bold.woff") format('woff'),
+  url("../font/Lato/Lato-Bold.ttf") format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: "Merriweather";
+  src: url("../font/Merriweather/Merriweather-Regular.woff2") format('woff2'),
+  url("../font/Merriweather/Merriweather-Regular.woff") format('woff'),
+  url("../font/Merriweather/Merriweather-Regular.ttf") format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: "Merriweather-Light";
+  src: url("../font/Merriweather/Merriweather-Light.woff2") format('woff2'),
+  url("../font/Merriweather/Merriweather-Light.woff") format('woff'),
+  url("../font/Merriweather/Merriweather-Light.ttf") format('truetype');
+  font-style: normal;
+}
+@import "../scss/mixed.scss";
+@import "../scss/header.scss";
+@import "../scss/footer.scss";
+.common-h1 {
+  color: $yellow;
+}
+.webkit-h1 {
+  background: linear-gradient(to right, rgba(237,197,128,1) 0%, rgba(237,197,128,1) 12%, rgba(187,158,92,1) 29%, rgba(187,158,92,1) 100%);
+  -webkit-background-clip: text;
+  color: rgba(0, 0, 0, 0);
+}
+body {
+  @include main;
+  @include border(4px);
+  text-align: center;
+  background: url("../img/cube.png") no-repeat left center $dark;
+  color: $grey;
+  cursor: default;
+  @include lato(100, 1rem, 1.8);
+}
+p {
+  margin: 0;
+}
+a {
+  @include a-none;
+}
+ul {
+  @include ul-none;
+}
+h1, h2 {
+  @include h-1(6rem, 1);
+  margin: 0;
+}
+h3 {
+  @include h-2(1.8rem, 1);
+  margin: 14px 0 0 0;
+}
+h4 {
+  color: $yellow;
+  text-transform: uppercase;
+  margin: 0;
+  font: 900 1rem "Lato-Bold", sans-serif;
+  line-height: 3;
+}
+main {
+  text-align: left;
+  margin: 0 auto;
+  width: 1300px;
+  .section {
+    overflow: auto;
+  }
+}
+.section:first-child {
+  margin: 40px 0 100px 0;
+  h3 {
+    margin: 14px 0 80px 0;
+  }
+}
+.section:first-child .wrap {
+  i {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+    background: url("../img/sprite.view.svg") no-repeat;
+  }
+  div:first-child i {
+    background-position: 90.9090909090909% 0;
+  }
+  div:nth-child(2) i {
+    background-position: 90.9090909090909% 60%;
+  }
+  div:nth-child(3) i {
+    background-position: 90.9090909090909% 30%;
+  }
+  div:last-child i {
+    background-position: 59.09090909090909% 75%;
+  }
+  div div {
+    border-left: solid 1px $yellow;
+    padding: 0 40px 0 16px;
+  }
+}
+.wrap {
+  float: none;
+  overflow: auto;
+  @include flexy(space-between, flex-start);
+  padding: 60px 0;
+  div, i {
+    float: left;
+  }
+}
+.section:last-child .wrap {
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0 200px 0;
+  flex-wrap: wrap;
+  a {
+      background: url("../img/sprite.view.svg") no-repeat;
+      width: 100px;
+      height: 100px;
+      display: block;
+      margin: 0 auto;
+  }
+  a:first-child {
+    background-position: 25% 0;
+  }
+  a:first-child:hover {
+    background-position: 75% 27.77777777777778%;
+  }
+  a:nth-child(2) {
+    background-position: 25% 83.33333333333333%;
+  }
+  a:nth-child(2):hover {
+    background-position: 0 83.33333333333333%;
+  }
+  a:nth-child(3) {
+    background-position: 75% 55.55555555555556%;
+  }
+  a:nth-child(3):hover {
+    background-position: 0 0;
+  }
+  a:nth-child(4) {
+    background-position: 25% 55.55555555555556%;
+  }
+  a:nth-child(4):hover {
+    background-position: 0 55.55555555555556%;
+  }
+  a:nth-child(5) {
+    background-position: 25% 27.77777777777778%;
+  }
+  a:nth-child(5):hover {
+    background-position: 0 27.77777777777778%;
+  }
+  a:nth-child(6) {
+    background-position: 50% 27.77777777777778%;
+  }
+  a:nth-child(6):hover {
+    background-position: 50% 0;
+  }
+  a:last-child {
+    background-position: 75% 0;
+  }
+  a:last-child:hover {
+    background-position: 50% 55.55555555555556%;
+  }
+}
+@include breakpoint($w1400) {
+  main {
+    width: 1080px;
+  }
+  .section:first-child .wrap div div {
+    padding: 0 0 0 16px;
+  }
+}
+@include breakpoint($w1300) {
+  h1, h2 {
+    font-size: 5.6rem;
+  }
+  main {
+    width: 900px;
+  }
+  .wrap {
+    padding: 48px 0;
+  }
+  .section:first-child .wrap div div {
+    padding: 0 80px 0 16px;
+  }
+  .section:last-child .wrap {
+    padding: 100px 0 180px 0;
+  }
+}
+@include breakpoint($w1070) {
+  main {
+    width: 740px;
+  }
+  .section:first-child .wrap div div {
+    padding: 0 20px 0 16px;
+  }
+  .section:last-child .wrap {
+    padding: 100px 0 160px 0;
+    a {
+      margin: 0 20px;
+    }
+  }
+}
+@include breakpoint($w900) {
+  h1, h2 {
+    font-size: 5.2rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+  }
+  main {
+    width: 600px;
+  }
+  .section:first-child {
+    h3 {
+      margin: 14px 0 40px 0;
+    }
+    .wrap {
+      display: block;
+      padding: 0;
+      div {
+        float: none;
+        overflow: auto;
+        margin: 16px 66px;
+        div, i {
+          float: left;
+        }
+      }
+    }
+  }
+  .section:last-child .wrap {
+    padding: 100px 0 140px 0;
+    a {
+      margin: 0 20px 0 0;
+    }
+  }
+}
+@include breakpoint($w800) {
+  h1, h2 {
+    font-size: 4.8rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  main {
+    width: 500px;
+  }
+  .section:first-child .wrap div {
+    margin: 16px 46px;
+  }
+  .section:last-child .wrap {
+    padding: 80px 0 100px 0;
+    a {
+      margin: 0 24px 0 0;
+    }
+  }
+}
+@include breakpoint($w700) {
+  main {
+    width: 460px;
+  }
+  .section:first-child .wrap div {
+    margin: 16px 36px;
+  }
+  .section:last-child .wrap a {
+    margin: 0 auto;
+  }
+}
+@include breakpoint($w600) {
+  h1, h2 {
+    font-size: 4.4rem;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  main {
+    width: 368px;
+  }
+  .section:first-child .wrap div {
+    margin: 16px 12px;
+  }
+  .section:last-child .wrap {
+    padding: 60px 0 100px 0;
+  }
+}
+@include breakpoint($w500) {
+  i {
+    transform: none;
+  }
+  h1, h2, h3 {
+    text-align: center;
+  }
+  main {
+    width: 332px;
+  }
+  .section:first-child {
+    h3 {
+      margin: 14px 0 12px 0;
+    }
+    .wrap div {
+      margin: 16px 4px;
+    }
+  }
+  .section:last-child .wrap {
+    padding: 40px 0 80px 0;
+  }
+}
+@include breakpoint($w400) {
+  h1, h2 {
+    font-size: 3.4rem;
+  }
+  h3 {
+    line-height: 1.4;
+  }
+  main {
+    width: 280px;
+  }
+  .section:first-child .wrap div {
+    margin: 16px 0;
+    div {
+      padding: 0 0 0 16px;
+      width: 120px;
+    }
+  }
+  .section:last-child .wrap {
+    padding: 40px 0;
+  }
+}

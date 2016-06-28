@@ -1,0 +1,94 @@
+@import "../bower_components/breakpoint-sass/stylesheets/breakpoint";
+$yellow: #E0BB77;
+$dark: #282828; //for bg
+$black: #121212;
+$grey: #969696; //icons
+$modal-button-hover: #f7f7f7;
+$modal-button-border: #f0f0f0;
+$input-border: #3b3b3b;
+
+@mixin main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-width: 320px;
+}
+@mixin lato($weight, $size, $l-height) {
+  font: $weight $size "Lato", sans-serif; // font: 300 1.2rem 'Lato', sans-serif;
+  line-height: $l-height; // line-height: 1;
+}
+@mixin mw($weight, $size, $transform) {  //400 0.8rem none
+  font: $weight $size 'Merriweather', serif;
+  text-transform: $transform;
+  transform: matrix( 2.10901633294851,0,0,2.10901633294851,0,0);
+  color: $yellow;
+}
+@mixin border($width) {
+  border: solid $width $yellow;
+}
+@mixin h-1($size, $l-height) {
+  font: 900 $size 'Lato', sans-serif; //6rem
+  line-height: $l-height; //1
+  text-transform: uppercase;
+}
+@mixin webkit-h1 {
+  background: linear-gradient(to right, rgba(238,198,129,1) 0%, rgba(238,198,129,1) 49%, rgba(145,120,64,1) 57%, rgba(145,120,64,1) 100%);
+  -webkit-background-clip: text;
+  color: rgba(0, 0, 0, 0);
+}
+@mixin h-2($size, $l-height) {
+  font: 200 $size 'Merriweather-Light', serif; //1.8rem
+  line-height: $l-height; //1
+}
+@mixin flexy ($horizontal, $vertical) {
+  display: flex;
+  justify-content: $horizontal;
+  align-items: $vertical;
+}
+@mixin button-none {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+  cursor: pointer;
+}
+@mixin a-none {
+  text-decoration: none;
+  cursor: pointer;
+}
+@mixin ul-none {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+$w1500: max-width 1500px;
+$w1420: max-width 1420px;
+$w1400: max-width 1400px;
+$w1300: max-width 1300px;
+$w1260: max-width 1260px;
+$w1230: max-width 1230px;
+$w1200: max-width 1200px;
+$w1160: max-width 1160px;
+$w1100: max-width 1100px;
+$w1070: max-width 1070px;
+$thousand: max-width 1000px; //breakpoints
+$w960: max-width 960px;
+$w900: max-width 900px;
+$w890: max-width 890px;
+$w860: max-width 860px;
+$w800: max-width 800px;
+$w750: max-width 750px;
+$w700: max-width 700px;
+$w670: max-width 670px;
+$w600: max-width 600px;
+$w579: max-width 579px;
+$w578: max-width 578px;
+$w545: max-width 545px;
+$w510: max-width 510px;
+$w500: max-width 500px;
+$w495: max-width 495px;
+$w450: max-width 450px;
+$w400: max-width 400px;
+$w426: max-width 426px;
+$w320: max-width 320px;

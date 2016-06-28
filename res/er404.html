@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link type="text/css" rel="stylesheet" href="css/er404.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <title>404</title>
+    <script>
+        $(document).ready(function(){
+            $("body").height(function(){
+                var hei = $(window).height();
+                $('body').height(hei-8);
+            });
+            var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+            if (isChrome) {
+                $('h1').removeClass('common-h1').addClass('webkit-h1');
+            }
+        });
+    </script>
+</head>
+<body>
+ <header class="header">
+     <div>
+         <i>M</i>
+         <p>Empty page</p>
+         <a href="index.html"></a>
+     </div>
+     <div>
+     </div>
+ </header>
+ <main>
+     <h1 class="common-h1">404</h1>
+     <div>
+         <p>Whatever you were looking for doesn't currently exist at this address. Unless you were looking for this error page, in which case: Congrats! You totally found it.</p>
+     </div>
+     <button><p>HOMEPAGE<i></i></p></button>
+ </main>
+ <footer class="footer">
+ </footer>
+</body>
+</html>

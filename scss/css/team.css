@@ -1,0 +1,306 @@
+@font-face {
+  font-family: "Lato";
+  src: url("../font/Lato/Lato-Regular.woff2") format("woff2"), url("../font/Lato/Lato-Regular.woff") format("woff"), url("../font/Lato/Lato-Regular.ttf") format("truetype");
+  font-style: normal; }
+
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("../font/Lato/Lato-Bold.woff2") format("woff2"), url("../font/Lato/Lato-Bold.woff") format("woff"), url("../font/Lato/Lato-Bold.ttf") format("truetype");
+  font-style: normal; }
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("../font/Merriweather/Merriweather-Regular.woff2") format("woff2"), url("../font/Merriweather/Merriweather-Regular.woff") format("woff"), url("../font/Merriweather/Merriweather-Regular.ttf") format("truetype");
+  font-style: normal; }
+
+@font-face {
+  font-family: "Merriweather-Light";
+  src: url("../font/Merriweather/Merriweather-Light.woff2") format("woff2"), url("../font/Merriweather/Merriweather-Light.woff") format("woff"), url("../font/Merriweather/Merriweather-Light.ttf") format("truetype");
+  font-style: normal; }
+
+.header {
+  overflow: auto;
+  padding: 60px; }
+  .header div:first-child {
+    position: relative; }
+    .header div:first-child i {
+      font: 400 0.8rem "Merriweather", serif;
+      text-transform: uppercase;
+      transform: matrix(2.10902, 0, 0, 2.10902, 0, 0);
+      color: #E0BB77;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 28px;
+      height: 28px;
+      float: left; }
+    .header div:first-child p {
+      padding-left: 20px;
+      display: inline;
+      font: 300 1.4rem "Merriweather", serif;
+      text-transform: none;
+      transform: matrix(2.10902, 0, 0, 2.10902, 0, 0);
+      color: #E0BB77;
+      line-height: 1.6; }
+    .header div:first-child a {
+      border: solid 1px #E0BB77;
+      background: url("../img/sprite.view.svg") no-repeat 69.2% 85.71429%;
+      width: 32px;
+      height: 32px;
+      float: right;
+      margin-top: -2px; }
+  .header div:last-child {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    top: 60px;
+    right: 50%;
+    margin-right: -28px;
+    border: solid 1px #E0BB77; }
+
+@media (max-width: 450px) {
+  .header {
+    padding: 28px 20px 40px 20px; }
+    .header div:first-child a {
+      width: 28px;
+      height: 28px;
+      background-position: 69% 85.71429%; }
+    .header div:first-child p {
+      font: 300 1.2rem "Merriweather", serif;
+      text-transform: none;
+      transform: matrix(2.10902, 0, 0, 2.10902, 0, 0);
+      color: #E0BB77; }
+    .header div:last-child {
+      width: 40px;
+      height: 40px;
+      top: 24px; } }
+
+.common-h1 {
+  color: #E0BB77; }
+
+.webkit-h1 {
+  background: linear-gradient(to right, #edc580 0%, #edc580 4%, #d8b472 24%, #ccad69 32%, #bb9f5d 36%, #bb9f5d 100%);
+  -webkit-background-clip: text;
+  color: transparent; }
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-width: 320px;
+  border: solid 4px #E0BB77;
+  text-align: center;
+  background: #282828;
+  color: #969696;
+  cursor: default;
+  font: 300 1.2rem 'Lato', sans-serif;
+  line-height: 1.6; }
+
+p {
+  margin: 0; }
+
+a {
+  text-decoration: none;
+  cursor: pointer; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+h1 {
+  font: 900 6.4rem "Lato", sans-serif;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0; }
+
+h2 {
+  font: 200 1.8rem "Merriweather-Light", serif;
+  line-height: 1.4;
+  margin: 0 0 28px 0; }
+
+h3 {
+  color: #E0BB77;
+  font: 900 1.2rem "Lato-Bold", sans-serif;
+  line-height: 1;
+  margin: 0 0 12px 0; }
+
+main {
+  overflow: auto;
+  padding-top: 40px;
+  text-align: left; }
+  main div {
+    float: left;
+    overflow: auto; }
+  main div:first-child {
+    width: 524px;
+    margin-left: 100px; }
+    main div:first-child div {
+      width: 50%; }
+    main div:first-child div:last-child {
+      position: static;
+      height: inherit; }
+  main a:hover, main a:active {
+    color: #E0BB77; }
+  main ul:nth-child(2) {
+    margin-bottom: 40px; }
+  main div:last-child {
+    width: 1000px;
+    height: 954px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -2;
+    background-size: contain; }
+    main div:last-child div {
+      background: #121212;
+      color: #E0BB77;
+      padding: 18px 20px;
+      width: 280px;
+      height: 60px;
+      top: 720px;
+      right: 188px; }
+    main div:last-child i {
+      font: 200 3.8rem 'Merriweather', serif;
+      line-height: 1;
+      display: block;
+      margin-right: 34px; }
+    main div:last-child i, main div:last-child p {
+      float: left; }
+    main div:last-child span {
+      color: #969696; }
+  main .mina {
+    background: url("../img/mina.png") no-repeat center bottom; }
+
+@media (max-width: 1500px) {
+  main div:last-child {
+    width: 800px; }
+    main div:last-child div {
+      padding: 16px 18px;
+      right: 112px;
+      width: 260px; } }
+
+@media (max-width: 1300px) {
+  main div:last-child {
+    width: 700px; }
+    main div:last-child div {
+      right: 80px;
+      top: 740px; } }
+
+@media (max-width: 1230px) {
+  main div:first-child {
+    margin-left: 80px; } }
+
+@media (max-width: 1200px) {
+  main div:first-child {
+    margin-left: 60px; }
+  main div:last-child {
+    width: 648px; } }
+
+@media (max-width: 1100px) {
+  main div:first-child {
+    width: 400px; }
+  main div:last-child {
+    width: 600px; }
+    main div:last-child div {
+      width: 236px;
+      padding: 14px; }
+    main div:last-child i {
+      font-size: 3.4rem; }
+    main div:last-child p {
+      line-height: 1.4; }
+  h1 {
+    font-size: 6rem; } }
+
+@media (max-width: 1000px) {
+  body {
+    font-size: 1rem; }
+  h1 {
+    font-size: 5.6rem; }
+  h2 {
+    font-size: 1.6rem; }
+  h3 {
+    font-size: 1.1rem; }
+  main div:last-child {
+    background-position: left top;
+    background-size: cover; }
+    main div:last-child i {
+      font-size: 3rem; }
+    main div:last-child div {
+      width: 204px;
+      padding: 12px 12px 0 12px; } }
+
+@media (max-width: 900px) {
+  main div:last-child {
+    width: 500px; } }
+
+@media (max-width: 800px) {
+  main div:first-child {
+    margin-left: 40px;
+    width: 340px; } }
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 5.4rem; }
+  main {
+    padding-top: 20px; }
+    main div:first-child {
+      width: 520px; }
+    main div:last-child {
+      width: 100%;
+      top: 720px;
+      height: 540px; }
+      main div:last-child div {
+        right: 40px;
+        top: 420px; } }
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 5.2rem; }
+  h2 {
+    font-size: 1.5rem; }
+  main {
+    padding-top: 0; }
+    main div:first-child {
+      width: 438px; }
+  body {
+    padding-bottom: 26px; } }
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 4.8rem; }
+  h2 {
+    font-size: 1.4rem; }
+  main div:first-child {
+    margin-left: 28px;
+    width: 334px; }
+  main div:last-child {
+    height: 440px;
+    top: 706px; }
+    main div:last-child div {
+      top: 340px;
+      right: 28px; } }
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 4.4rem; }
+  main {
+    padding-top: 12px; }
+    main div:last-child {
+      top: 652px;
+      height: 400px; }
+      main div:last-child div {
+        top: 300px; } }
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 4rem; }
+  h2 {
+    font-size: 1.2rem; }
+  main div:first-child {
+    margin-left: 20px;
+    width: 280px; }
+  main div:last-child {
+    top: 640px; }
+    main div:last-child div {
+      right: 18px; } }

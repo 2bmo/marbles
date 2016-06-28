@@ -1,0 +1,99 @@
+.footer {
+  margin-top: 100px; }
+  .footer h3 {
+    font: 900 1.8rem "Lato-Bold", sans-serif;
+    line-height: 1;
+    color: #fff;
+    margin: 10px 0; }
+  .footer i {
+    font: 400 0.8rem "Merriweather", serif;
+    text-transform: uppercase;
+    transform: matrix(2.10902, 0, 0, 2.10902, 0, 0);
+    color: #E0BB77;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .footer div {
+    margin: 0 auto;
+    overflow: auto; }
+  .footer div:first-child {
+    padding: 10px;
+    width: 40px; }
+  .footer .city {
+    margin: 40px auto;
+    text-align: left;
+    text-transform: uppercase;
+    -moz-transform: matrix(0.99991, 0, 0, 1.00001, 0, 0);
+    -webkit-transform: matrix(0.99991, 0, 0, 1.00001, 0, 0);
+    -ms-transform: matrix(0.99991, 0, 0, 1.00001, 0, 0);
+    width: 900px; }
+    .footer .city div {
+      font: 300 0.8rem "Lato", sans-serif;
+      line-height: 1.6;
+      width: 328px; }
+    .footer .city div:first-child {
+      float: left;
+      padding: 0; }
+    .footer .city div:last-child {
+      float: right; }
+    .footer .city a {
+      display: block;
+      margin-top: 28px;
+      color: #969696;
+      font-size: .8rem;
+      line-height: 2; }
+  .footer .city + div {
+    font-size: .6rem;
+    line-height: 2;
+    margin-bottom: 40px;
+    text-align: center; }
+  .footer span {
+    color: #E0BB77; }
+
+@media (max-width: 1000px) {
+  .footer {
+    margin-top: 80px; }
+    .footer .city {
+      width: 600px;
+      margin: 28px auto 40px auto; }
+      .footer .city div {
+        width: 220px; } }
+
+@media (max-width: 700px) {
+  .footer .city {
+    width: 480px; }
+    .footer .city div {
+      width: 188px; }
+  .footer h3 {
+    font-size: 1.4rem; } }
+
+@media (max-width: 579px) {
+  .footer {
+    margin-top: 40px; }
+    .footer .city {
+      width: 420px; } }
+
+@media (max-width: 510px) {
+  .footer .city {
+    width: 400px; } }
+
+@media (max-width: 450px) {
+  .footer .city {
+    width: auto;
+    margin: 12px auto 40px auto; }
+    .footer .city div {
+      width: 210px; }
+    .footer .city div:first-child, .footer .city div:last-child {
+      float: none; }
+    .footer .city div:first-child {
+      margin-bottom: 40px; }
+    .footer .city a {
+      margin-top: 16px; }
+  .footer .city + div {
+    margin-bottom: 28px; }
+  i {
+    font: 400 0.6rem "Merriweather", serif;
+    text-transform: uppercase;
+    transform: matrix(2.10902, 0, 0, 2.10902, 0, 0);
+    color: #E0BB77; } }

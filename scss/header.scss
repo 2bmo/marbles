@@ -1,0 +1,58 @@
+@import "../scss/mixed.scss";
+.header {
+  overflow: auto;
+  padding: 60px;
+  div:first-child {
+    position: relative;
+    i {
+      @include mw(400, .8rem, uppercase);
+      @include flexy(center, center);
+      width: 28px;
+      height: 28px;
+      float: left;
+    }
+    p {
+      padding-left: 20px;
+      display: inline;
+      @include mw(300, 1.4rem, none);
+      line-height: 1.6;
+    }
+    a {
+      @include border(1px);
+      background: url("../img/sprite.view.svg") no-repeat 69.2% 85.71429%;
+      width: 32px;
+      height: 32px;
+      float: right;
+      margin-top: -2px;
+    }
+  }
+  div:last-child {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    top: 60px;
+    right: 50%;
+    margin-right:-28px;
+    @include border(1px);
+  }
+}
+@include breakpoint($w450) {
+  .header {
+    padding: 28px 20px 40px 20px;
+    div:first-child {
+      a {
+        width: 28px;
+        height: 28px;
+        background-position: 69% 85.71429%;
+      }
+      p {
+        @include mw(300, 1.2rem, none)
+      }
+    }
+    div:last-child {
+      width: 40px;
+      height: 40px;
+      top: 24px;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="css/team.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <title>Team</title>
+</head>
+<body>
+<header class="header">
+    <div>
+        <i>M</i>
+        <p>Chapter 2</p>
+        <a href="index.html"></a>
+    </div>
+    <div>
+    </div>
+</header>
+<main>
+    <div>
+        <h1 class="common-h1">TEAM</h1>
+        <h2>Not just coworkers - family.</h2>
+        <div>
+            <h3>HEAD</h3>
+            <ul>
+                <li><a>Madeline Gagliardi</a></li>
+                <li><a>Johanna Rodgers</a></li>
+                <li><a>Alida Fye</a></li>
+            </ul>
+            <h3>CREATIVE</h3>
+            <ul>
+                <li><a>Brent Rames</a></li>
+                <li><a>Divina Litz</a></li>
+                <li><a>Laveta Clune</a></li>
+                <li><a>Larae Frances</a></li>
+                <li><a>Lulu Gulledge</a></li>
+                <li><a>Terisa Stecklein</a></li>
+                <li><a>Sybil Stelle</a></li>
+                <li><a>Miguelina Kenny</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>DEVELOPERS</h3>
+            <ul>
+                <li><a>Franchesca Deardorf</a></li>
+                <li><a>Leida Friedland</a></li>
+                <li><a>Mina Harward</a></li>
+                <li><a>Dick Snover</a></li>
+            </ul>
+            <h3>MORE</h3>
+            <ul>
+                <li><a>Franchesca Deardorf</a></li>
+                <li><a>Leida Friedland</a></li>
+                <li><a>Mina Harward</a></li>
+                <li><a>Dick Snover</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="mina">
+        <div>
+            <i>M</i>
+            <p>
+                <span>Mina Harward</span><br>
+                PHP Developer
+            </p>
+        </div>
+    </div>
+</main>
+<script>
+    $(document).ready(function(){
+        $('body').height(function(){
+            var width= $(document).innerWidth();
+            var height= $('main>div:last-child').outerHeight(true);
+            var main= $('main').outerHeight(true);
+            var header= $('.header').outerHeight(true);
+            if (width > 700) {
+                $('body').height(height);
+            } else {
+                $('body').height(height+main+header+14);
+            }
+        });
+        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if (isChrome) {
+            $('h1').removeClass('common-h1').addClass('webkit-h1');
+        }
+    });
+</script>
+</body>
+</html>

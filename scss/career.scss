@@ -1,0 +1,239 @@
+@font-face {
+  font-family: "Lato";
+  src: url("../font/Lato/Lato-Regular.woff2") format('woff2'),
+  url("../font/Lato/Lato-Regular.woff") format('woff'),
+  url("../font/Lato/Lato-Regular.ttf") format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("../font/Lato/Lato-Bold.woff2") format('woff2'),
+  url("../font/Lato/Lato-Bold.woff") format('woff'),
+  url("../font/Lato/Lato-Bold.ttf") format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: "Merriweather";
+  src: url("../font/Merriweather/Merriweather-Regular.woff2") format('woff2'),
+  url("../font/Merriweather/Merriweather-Regular.woff") format('woff'),
+  url("../font/Merriweather/Merriweather-Regular.ttf") format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: "Merriweather-Light";
+  src: url("../font/Merriweather/Merriweather-Light.woff2") format('woff2'),
+  url("../font/Merriweather/Merriweather-Light.woff") format('woff'),
+  url("../font/Merriweather/Merriweather-Light.ttf") format('truetype');
+  font-style: normal;
+}
+@import "../scss/mixed.scss";
+@import "../scss/header.scss";
+@import "../scss/footer.scss";
+.common-h1 {
+  color: $yellow;
+}
+.webkit-h1 {
+  @include webkit-h1;
+}
+body {
+  @include main;
+  @include border(4px);
+  text-align: center;
+  color: $grey;
+  background: $dark;
+  cursor: default;
+  font: 300 1.4rem 'Lato', sans-serif;
+  line-height: 1.6;
+}
+p {
+  margin: 0;
+}
+a {
+  @include a-none;
+}
+h1 {
+  @include h-1(6rem, 1);
+  margin: 0;
+}
+h2 {
+  @include h-2(1.4rem, 1.8);
+  margin: 0;
+}
+.wrap {
+  @include flexy(center, center);
+  div {
+    border: solid 1px $grey;
+    width: 260px;
+    height: 302px;
+    margin: 100px 18px;
+    vertical-align: bottom;
+      h3 {
+      color: #fff;
+      font: 900 1.4rem "Lato-Bold", sans-serif;
+      line-height: 2.2;
+      margin: 200px 0 0 0;
+    }
+    a {
+      display: none;
+      color: $yellow;
+      @include lato(300, .8rem, 1);
+    }
+    span {
+      background: url("../img/sprite.view.svg") no-repeat  39.14% 93.6%;
+      padding: 4px 14px;
+    }
+  }
+  div:hover {
+    border-color: $yellow;
+    a {
+      display: block;
+    }
+  }
+}
+.slide:first-child+.slide {
+  background: url("../img/cube.png") no-repeat left 480px;
+  div+p {
+    @include h-2(1.2rem, 1.6);
+  }
+  .footer .city+div {
+    padding-bottom: 40px;
+  }
+}
+.slide:first-child, .slide:last-child {
+  text-transform: uppercase;
+  background: $black;
+  h3 {
+    font: 900 1.6rem "Lato-Bold", sans-serif;
+    line-height: 3;
+    color: $yellow;
+    text-align: left;
+    padding-left: 40px;
+  }
+  a {
+    font-size: .8rem;
+    padding: 40px 20px;
+    display: block;
+    color: $grey;
+    p:nth-child(2) {
+      color: #fff;
+      @include lato(900, 1.4rem, 3);
+    }
+    p:last-child {
+      color: $yellow;
+    }
+  }
+  a:hover {
+    background: #fff;
+    p:nth-child(2) {
+      color: $black;
+    }
+  }
+}
+@include breakpoint($w1500) {
+  .slide:first-child + .slide {
+    background-position: -100px 448px;
+  }
+}
+@include breakpoint($w1300) {
+  .slide:first-child + .slide {
+    background-position: -200px 528px;
+  }
+}
+@include breakpoint($w1100) {
+  .slide:first-child + .slide {
+    background-position: -180px 608px;
+  }
+}
+@include breakpoint($w800) {
+  h1 {
+    font-size: 5.4rem;
+  }
+  .wrap div {
+    width: 220px;
+    height: 262px;
+    margin: 68px 18px;
+    h3 {
+      margin: 172px 0 0 0;
+    }
+  }
+}
+@include breakpoint($w700) {
+  .slide:first-child + .slide {
+    background-position: -180px 560px;
+  }
+  h1 {
+    font-size: 4.8rem;
+  }
+  .wrap div {
+    width: 200px;
+    height: 240px;
+    h3 {
+      margin: 160px 0 0 0;
+    }
+  }
+  .slide:first-child h3, .slide:last-child h3 {
+    padding-left: 22px;
+  }
+}
+@include breakpoint($w600) {
+  h1 {
+    font-size: 4.4rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  .wrap div {
+    width: 180px;
+    height: 220px;
+    margin: 62px 12px;
+    h3 {
+      margin: 140px 0 0 0;
+      font-size: 1.2rem;
+    }
+  }
+  .slide:first-child + .slide div + p {
+    margin: 0 28px;
+    font-size: 1rem;
+  }
+  .slide:first-child h3, .slide:last-child h3 {
+    padding: 0 20px;
+    text-align: center;
+  }
+}
+@include breakpoint($w450) {
+  .slide:first-child + .slide {
+    background-position: -180px 664px;
+  }
+  h1 {
+    margin-top: 20px;
+  }
+  .wrap {
+    flex-wrap: wrap;
+    padding: 0 28px;
+    div {
+      margin: 32px 12px;
+      i {
+        background-position: 0 -4944.4px;
+      }
+    }
+    div:first-child {
+      margin: 32px 12px 0 12px;
+    }
+  }
+}
+@include breakpoint($w400) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+@include breakpoint($w426) {
+  .slide:first-child h3, .slide:last-child h3 {
+    line-height: 1.4;
+    margin: 60px 0 20px 0;
+  }
+}
+@include breakpoint($w320) {
+  h1 {
+    font-size: 3.4rem;
+  }
+}

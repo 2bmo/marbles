@@ -1,0 +1,424 @@
+@font-face {
+  font-family: "Lato";
+  src: url("../font/Lato/Lato-Regular.woff2") format('woff2'),
+  url("../font/Lato/Lato-Regular.woff") format('woff'),
+  url("../font/Lato/Lato-Regular.ttf") format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("../font/Lato/Lato-Bold.woff2") format('woff2'),
+  url("../font/Lato/Lato-Bold.woff") format('woff'),
+  url("../font/Lato/Lato-Bold.ttf") format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: "Merriweather";
+  src: url("../font/Merriweather/Merriweather-Regular.woff2") format('woff2'),
+  url("../font/Merriweather/Merriweather-Regular.woff") format('woff'),
+  url("../font/Merriweather/Merriweather-Regular.ttf") format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: "Merriweather-Light";
+  src: url("../font/Merriweather/Merriweather-Light.woff2") format('woff2'),
+  url("../font/Merriweather/Merriweather-Light.woff") format('woff'),
+  url("../font/Merriweather/Merriweather-Light.ttf") format('truetype');
+  font-style: normal;
+}
+@import "../scss/mixed.scss";
+@import "../scss/header.scss";
+@import "../scss/footer.scss";
+.common-h1 {
+  color: $yellow;
+}
+.webkit-h1 {
+  background:  linear-gradient(to right, rgba(237,197,128,1) 0%, rgba(237,197,128,1) 26%, rgba(176,150,90,1) 38%, rgba(176,150,90,1) 100%);
+  -webkit-background-clip: text;
+  color: rgba(0, 0, 0, 0);
+}
+body {
+  @include main;
+  @include border(4px);
+  text-align: center;
+  background: url("../img/cube.png") no-repeat left 600px $dark;
+  color: $grey;
+  cursor: default;
+  @include lato(300, 1.2rem, 1);
+}
+p {
+  margin: 0;
+}
+a {
+  @include a-none;
+}
+h1 {
+  @include h-1(6.6rem, 1);
+  margin: 40px 0 0 0;
+}
+h2 {
+  @include h-2(1.8rem, 1.4);
+}
+h1, h2 {
+  text-align: left;
+}
+h2, .inst h3, .inst h4 {
+  margin: 0;
+}
+main {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: auto;
+  ul {
+    @include ul-none;
+    width: 100%;
+    overflow: auto;
+    li {
+      float: left;
+    }
+    a {
+      font-size: 1rem;
+      color: $grey;
+      padding: 32px 12px 48px 12px;
+      display: block;
+    }
+    li:first-child a {
+      padding: 32px 12px 48px 0;
+    }
+    a:hover {
+      color: $yellow
+    }
+  }
+}
+.wrap {
+  overflow: auto;
+}
+.wrap:last-child div{
+  margin-bottom: 0;
+}
+.inst {
+  background: $black;
+  width: 570px;
+  height: 440px;
+  float: left;
+  margin-bottom: 32px;
+  div {
+    width: 570px;
+    padding-top: 160px;
+    color: #fff;
+    text-transform: uppercase;
+    display: none;
+  }
+  a {
+    color: $yellow;
+    font-size: .8rem;
+    span {
+      padding: 0;
+      width: 28px;
+      height: 28px;
+      display: inline-block;
+      background: url("../img/sprite.view.svg") no-repeat 39.130434782608695% 92.4%;
+    }
+  }
+
+  h3 {
+    font: 300 2rem 'Lato', sans-serif;
+    line-height: 1;
+  }
+  h4 {
+    padding: 6px 0 20px 0;
+    font-weight: 600;
+    line-height: 1;
+  }
+}
+.inst:first-child {
+  margin-right: 32px;
+}
+.inst:hover {
+  div {
+    display: block;
+  }
+}
+@include breakpoint($w1420) {
+  body {
+    background-position: -260px 520px;
+  }
+  h1 {
+    font-size: 6rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  main {
+    width: 1036px;
+  }
+  .inst {
+    width: 500px;
+    height: 370px;
+    div {
+      width: 500px;
+      padding-top: 138px;
+    }
+  }
+  .footer i {
+    padding-left: 8px;
+  }
+}
+@include breakpoint($w1260) {
+  body {
+    background-position: -300px 460px;
+  }
+  h1 {
+    font-size: 5.6rem;
+  }
+  main {
+    width: 952px;
+  }
+  .inst {
+    width: 460px;
+    height: 330px;
+    div {
+      width: 460px;
+      padding-top: 116px;
+    }
+  }
+}
+@include breakpoint($w1160) {
+  body {
+    background-position: -340px 460px;
+  }
+  h1 {
+    font-size: 5.4rem;
+  }
+  main {
+    width: 874px;
+  }
+  .inst {
+    width: 420px;
+    height: 320px;
+    div {
+      width: 420px;
+    }
+  }
+}
+@include breakpoint($w1070) {
+  body {
+    background-position: -300px 400px;
+  }
+  h1 {
+    font-size: 5.2rem;
+  }
+  main {
+    width: 792px;
+  }
+  .inst {
+    width: 380px;
+    height: 300px;
+    margin-bottom: 30px;
+    div {
+      width: 380px;
+      padding-top: 100px;
+    }
+    h3 {
+      font-size: 1.8rem;
+    }
+    h4 {
+      font-size: 1.1rem;
+    }
+  }
+  .inst:first-child {
+    margin-right: 30px;
+  }
+}
+@include breakpoint($w960) {
+  main {
+    width: 712px;
+    ul li:first-child a {
+      padding: 24px 12px 40px 0;
+    }
+    ul a {
+      padding: 24px 12px 40px 12px;
+    }
+  }
+  .inst {
+    width: 340px;
+    height: 280px;
+    div {
+      width: 340px;
+      padding-top: 96px;
+    }
+  }
+}
+@include breakpoint($w890) {
+  body {
+    background-position: -300px 300px;
+  }
+  h1 {
+    font-size: 5rem;
+    margin: 32px 0 0 0;
+  }
+  main {
+    width: 620px;
+  }
+  .inst {
+    width: 294px;
+    height: 244px;
+    div {
+      width: 294px;
+      padding-top: 80px;
+    }
+    a {
+      font-size: .7rem;
+    }
+    h3 {
+      font-size: 1.6rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+  }
+}
+@include breakpoint($w750) {
+  body {
+    background-position: -300px 1340px;
+  }
+  main {
+    width: 580px;
+  }
+  .inst {
+    width: 500px;
+    height: 400px;
+    float: none;
+    margin: 24px auto;
+    div {
+      width: 500px;
+      padding-top: 160px;
+    }
+    a {
+      font-size: .8rem;
+    }
+    h3 {
+      font-size: 1.8rem;
+    }
+    h4 {
+      font-size: 1.2rem;
+    }
+  }
+  .inst:first-child {
+    margin: 0 auto 12px auto;
+  }
+}
+@include breakpoint($w670) {
+  body {
+    background-position: -300px 1100px;
+  }
+  main {
+    width: 500px;
+  }
+  .inst {
+    width: 420px;
+    height: 340px;
+    div {
+      width: 420px;
+      padding-top: 126px;
+    }
+  }
+}
+@include breakpoint($w579) {
+  body {
+    background-position: -300px 920px;
+  }
+  h1 {
+    font-size: 4.2rem;
+  }
+  main {
+    width: 428px;
+    ul li:first-child a {
+      padding: 24px 0 40px 0;
+    }
+    ul a {
+      padding: 24px 2px 40px 8px;
+    }
+  }
+  .inst {
+    width: 360px;
+    height: 300px;
+    div {
+      width: 360px;
+      padding-top: 110px;
+    }
+  }
+}
+@include breakpoint($w510) {
+  body {
+    background-position: -300px 824px;
+  }
+  h1 {
+    font-size: 3.6rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  h1, h2 {
+    text-align: center;
+  }
+  main {
+    width: 340px;
+    ul {
+      text-align: left;
+      margin-bottom: 24px;
+    }
+    ul li {
+      float: none;
+    }
+    ul li:first-child a {
+      padding: 24px 0 6px 0;
+    }
+    ul a {
+      padding: 6px 0;
+    }
+  }
+  .inst {
+    width: 300px;
+    height: 260px;
+    div {
+      width: 300px;
+      padding-top: 92px;
+    }
+    h3 {
+      font-size: 1.6rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+  }
+}
+@include breakpoint($w450) {
+  body {
+    background-position: -340px 580px;
+  }
+  h1 {
+    font-size: 2.8rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+    line-height: 1.2;
+  }
+  main {
+    width: 260px;
+    ul a {
+      font-size: .9rem;
+    }
+  }
+  .inst {
+    width: 240px;
+    height: 200px;
+    div {
+      width: 240px;
+      padding-top: 60px;
+    }
+    h3 {
+      font-size: 1.2rem;
+    }
+  }
+}

@@ -1,0 +1,808 @@
+@font-face {
+  font-family: "Lato";
+  src: url("../font/Lato/Lato-Regular.woff2") format('woff2'),
+  url("../font/Lato/Lato-Regular.woff") format('woff'),
+  url("../font/Lato/Lato-Regular.ttf") format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("../font/Lato/Lato-Bold.woff2") format('woff2'),
+  url("../font/Lato/Lato-Bold.woff") format('woff'),
+  url("../font/Lato/Lato-Bold.ttf") format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: "Merriweather";
+  src: url("../font/Merriweather/Merriweather-Regular.woff2") format('woff2'),
+  url("../font/Merriweather/Merriweather-Regular.woff") format('woff'),
+  url("../font/Merriweather/Merriweather-Regular.ttf") format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: "Merriweather-Light";
+  src: url("../font/Merriweather/Merriweather-Light.woff2") format('woff2'),
+  url("../font/Merriweather/Merriweather-Light.woff") format('woff'),
+  url("../font/Merriweather/Merriweather-Light.ttf") format('truetype');
+  font-style: normal;
+}
+@import "../scss/mixed.scss";
+@import "../scss/header.scss";
+@import "../scss/footer.scss";
+.common-h1 {
+  color: $yellow;
+}
+.webkit-h1 {
+  @include webkit-h1;
+}
+body {
+  @include main;
+  @include border(4px);
+  text-align: center;
+  background: $dark;
+  color: $grey;
+  cursor: default;
+  @include lato(200, 1rem, 1);
+}
+p {
+  margin: 0;
+}
+a {
+  @include a-none;
+}
+h1 {
+  @include h-1(6.6rem, 1);
+  margin: 0;
+}
+h2 {
+  @include h-2(1.8rem, 1);
+  margin: 14px 0 72px 0;
+}
+main {
+  margin-top: 28px;
+  .section {
+    text-transform: uppercase;
+    background: $black;
+    padding: 80px 0;
+    a {
+      color: #fff;
+      display: block;
+      line-height: 2.8;
+      font: 900 2.4rem "Lato-Bold", sans-serif;
+      margin: 20px 0;
+    }
+    p:last-child {
+      color: $yellow;
+      @include flexy(center, flex-start);
+    }
+    span {
+      display: block;
+      width: 212px;
+    }
+    span:first-child {
+      padding-right: 20px;
+    }
+
+  }
+  .section:hover, .section:active, .section:focus {
+    background: #fff;
+    a {
+      color: $black;
+    }
+  }
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  button {
+    @include border(1px);
+    @include lato(500, 1rem, 1);
+    color: $yellow;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+  }
+}
+.m-header {
+  width: 1098px;
+  overflow: auto;
+  margin: 140px auto 24px auto;
+  button {
+    float: right;
+    top: 150px;
+    right: 200px;
+    background: url("../img/sprite.view.svg") no-repeat 60.6% 84.8%;
+  }
+}
+.m-main {
+  margin: 0 auto;
+  overflow: auto;
+  width: 1104px;
+  button:first-child {
+    background: url("../img/sprite.view.svg") no-repeat 48% 94.6%;
+    margin-right: 20px;
+  }
+  button:last-child {
+    background: url("../img/sprite.view.svg") no-repeat 39.4% 94.4%;
+    margin-left: 20px;
+  }
+  button {
+    margin-top: 680px;
+  }
+  button, .m-content {
+    float: left;
+  }
+}
+.m-content {
+  width: 998px;
+  background: #fff;
+  margin: 0 auto 60px auto;
+  .c-header {
+    background: url("../img/bg-content.png") no-repeat center bottom;
+    background-size: cover;
+    height: 540px;
+  }
+  h3 {
+    @include h-1(3.4rem, 1);
+    margin: 0;
+  }
+  h4 {
+    @include h-2(2rem, 2);
+    margin: 0 0 20px 0;
+  }
+  img {
+    margin: 48px 0;
+    height: 546px;
+  }
+  img, p {
+    width: 840px;
+  }
+  p {
+    text-align: justify;
+    margin-left: 80px;
+    font: 400 1rem "Merriweather", serif;
+    line-height: 1.6;
+  }
+  .c-footer {
+    div {
+      overflow: auto;
+    }
+    div:first-child {
+      button {
+        border: solid 1px $modal-button-border;
+        color: $grey;
+        width: 50%;
+        height: 100px;
+        float: left;
+        margin: 0;
+        background: transparent;
+      }
+      button:first-child {
+        border-right: none;
+      }
+      button:hover, button:active {
+        background: $modal-button-hover;
+      }
+    }
+    div:last-child {
+      float: none;
+      padding: 60px 0;
+      @include flexy(center, center);
+    }
+    a {
+      width: 40px;
+      height: 40px;
+      display: block;
+      background: url("../img/sprite.view.svg") no-repeat;
+      float: left;
+      margin: 0 22px;
+    }
+    a:first-child {
+      background-position: 82.6086956521739% 95.23809523809524%;
+    }
+    a:first-child+a {
+      background-position: 100% 0;
+    }
+    a:last-child {
+      background-position: 56.52173913043478% 95.23809523809524%;
+    }
+    .comments {
+      padding: 40px 40px 0 40px;
+      div, div:last-child {
+        float: none;
+        display: block;
+        width: 100%;
+        overflow: auto;
+        padding: 10px 0;
+        margin: 0;
+        .comments-wrap {
+          width: 780px;
+          padding: 0;
+          margin: 0 auto;
+        }
+      }
+      .mid{
+        width: 86%;
+        margin-left: 12%;
+        .comments-wrap {
+          width: 680px;
+        }
+      }
+      i {
+        display: inline-block;
+        float: left;
+        border-radius: 50%;
+        width: 72px;
+        height: 72px;
+        background: $grey;
+        margin: 0;
+      }
+      p {
+        margin: 0;
+        width: 100%;
+        display: block;
+        overflow: auto;
+      }
+      span {
+        font-weight: 900;
+        line-height: 2;
+      }
+      span:first-child {
+        float: left;
+      }
+      span:last-child {
+        float: right;
+      }
+    }
+  }
+}
+@include breakpoint($w1300) {
+  .m-header {
+    margin: 120px auto 24px auto;
+  }
+}
+@include breakpoint($w1260) {
+  .m-header {
+    margin: 104px auto 24px auto;
+    width: 1018px;
+  }
+  .m-main {
+    width: 1024px;
+    button {
+      margin-top: 612px;
+    }
+  }
+  .m-content {
+    width: 918px;
+    .c-header {
+      height: 460px;
+    }
+    p, img {
+      width: 760px;
+    }
+    img {
+      height: 500px;
+    }
+    .c-footer .comments {
+      div .comments-wrap, div:last-child .comments-wrap {
+        width: 720px;
+      }
+      .mid .comments-wrap {
+        width: 620px;
+      }
+    }
+  }
+}
+@include breakpoint($w1230) {
+  main {
+    .section {
+      padding: 60px 0;
+      a {
+        font-size: 2.2rem;
+        line-height: 2.6;
+        margin: 0 auto;
+      }
+      span:first-child {
+        padding-right: 0;
+      }
+    }
+  }
+}
+@include breakpoint($w1160) {
+  .m-header {
+    width: 968px;
+  }
+  .m-main {
+    width: 974px;
+  }
+  .m-content {
+    width: 868px;
+    p, img {
+      width: 720px;
+    }
+    img {
+      height: 480px;
+    }
+    .c-footer .comments {
+      div .comments-wrap, div:last-child .comments-wrap {
+        width: 640px;
+      }
+      .mid .comments-wrap {
+        width: 560px;
+      }
+    }
+  }
+}
+@include breakpoint($w1070) {
+  .m-header {
+    width: 872px;
+  }
+  .m-main {
+    width: 900px;
+    button:first-child {
+      margin-right: 14px;
+    }
+    button:last-child {
+      margin-left: 14px;
+    }
+    button {
+      margin-top: 544px;
+    }
+  }
+  .m-content {
+    width: 798px;
+    .c-header {
+      height: 400px;
+    }
+    p {
+      margin-left: 60px;
+    }
+    p, img {
+      width: 680px;
+    }
+    img {
+      height: 448px;
+    }
+    .c-footer .comments {
+      div .comments-wrap, div:last-child .comments-wrap {
+        width: 592px;
+      }
+      .mid .comments-wrap {
+        width: 520px;
+      }
+    }
+  }
+}
+@include breakpoint($w960) {
+  .m-header, .m-main {
+    width: 800px;
+  }
+  .m-main button {
+      margin-top: 448px;
+  }
+  .m-content {
+    width: 708px;
+    .c-header {
+      height: 300px;
+    }
+    p, img {
+      width: 590px;
+    }
+    img {
+      height: 380px;
+    }
+    .c-footer .comments {
+      div .comments-wrap, div:last-child .comments-wrap {
+        width: 522px;
+      }
+      .mid .comments-wrap {
+        width: 454px;
+      }
+      i {
+        width: 62px;
+        height: 62px;
+      }
+    }
+  }
+}
+@include breakpoint($w900) {
+  h1 {
+    font-size: 6rem;
+  }
+  main .section a {
+    font-size: 2rem;
+  }
+}
+@include breakpoint($w860) {
+  .m-header {
+    width: 680px;
+  }
+  .m-main {
+    width: 700px;
+    button {
+      margin-top: 400px;
+    }
+  }
+  .m-content {
+    width: 600px;
+    .c-header {
+      height: 260px;
+    }
+    h4 {
+      font-size: 1.8rem;
+    }
+    p {
+      font-size: .9rem;
+      margin-left: 52px;
+    }
+    p, img {
+      width: 500px;
+    }
+    img {
+      height: 320px;
+    }
+    .c-footer .comments {
+      div .comments-wrap, div:last-child .comments-wrap {
+        width: 420px;
+      }
+      .mid .comments-wrap {
+        width: 364px;
+      }
+    }
+  }
+}
+@include breakpoint($w750) {
+  .m-header {
+    width: 600px;
+  }
+  .m-main {
+    width: 606px;
+    button {
+      margin-top: 376px;
+    }
+  }
+  .m-content {
+    width: 512px;
+    .c-header {
+      height: 240px;
+    }
+    h4 {
+      font-size: 1.6rem;
+    }
+    p, img {
+      width: 414px;
+    }
+    img {
+      height: 280px;
+      margin: 34px 0;
+    }
+    .c-footer {
+      .comments {
+        div .comments-wrap, div:last-child .comments-wrap {
+          width: 340px;
+        }
+        .mid .comments-wrap {
+          width: 292px;
+        }
+      }
+      div:last-child {
+        padding: 40px 0 60px 0;
+      }
+      div:first-child button {
+        height: 90px;
+        font-size: .8rem;
+      }
+    }
+  }
+}
+@include breakpoint($w700) {
+  h1 {
+    font-size: 5.6rem;
+  }
+  main {
+    .section {
+      padding: 60px 80px;
+      a {
+        line-height: 1;
+        padding: 22px 0;
+      }
+    }
+  }
+}
+@include breakpoint($w670) {
+  .modal button {
+    width: 28px;
+    height: 28px;
+  }
+  .m-header {
+    width: 518px;
+    margin: 104px auto 18px auto;
+  }
+  .m-main {
+    width: 526px;
+    button:first-child {
+      background-position: 48% 93.8%;
+    }
+    button:last-child {
+      background-position: 39.4% 93.8%;
+    }
+    button {
+      margin-top: 344px;
+    }
+  }
+  .m-content {
+    width: 440px;
+    .c-header {
+      height: 220px;
+    }
+    h4 {
+      font-size: 1.4rem;
+    }
+    p {
+      margin-left: 42px;
+    }
+    p, img {
+      width: 360px;
+    }
+    img {
+      height: 240px;
+    }
+    .c-footer {
+      div:first-child button {
+        height: 80px;
+      }
+      .comments {
+        padding: 20px 20px 0 20px;
+        div .comments-wrap, div:last-child .comments-wrap {
+          width: 314px;
+        }
+        .mid .comments-wrap {
+          width: 260px;
+        }
+      }
+    }
+  }
+}
+@include breakpoint($w578) {
+  main {
+    margin-top: 0;
+    .section {
+      padding: 60px 32px;
+    }
+  }
+  .m-header {
+    width: 452px;
+  }
+  .m-main {
+    width: 460px;
+    button {
+      margin-top: 292px;
+    }
+  }
+  .m-content {
+    width: 374px;
+    .c-header {
+      height: 180px;
+    }
+    h3 {
+      font-size: 2.7rem;
+    }
+    h4 {
+      font-size: 1.3rem;
+    }
+    p {
+      margin-left: 32px;
+    }
+    p, .m-content img {
+      width: 312px;
+    }
+    img {
+      height: 200px;
+    }
+    .c-footer {
+      div:first-child button {
+        height: 72px;
+      }
+      div .comments-wrap, div:last-child .comments-wrap {
+        width: 248px;
+      }
+      .mid {
+        width: 90%;
+        margin-left: 10%;
+        .comments-wrap {
+          width: 212px;
+        }
+      }
+    }
+  }
+}
+@include breakpoint($w545) {
+  main .section {
+    padding: 60px 52px;
+    a {
+      padding: 28px 0;
+    }
+  }
+}
+@include breakpoint($w500) {
+  .m-header {
+    width: 384px;
+    margin: 94px auto 18px auto;
+  }
+  .m-main {
+    width: 400px;
+    button {
+      margin-top: 236px;
+    }
+  }
+  .m-content {
+    width: 314px;
+    p {
+      margin-left: 28px;
+    }
+    p, img {
+      width: 262px;
+    }
+    img {
+      height: 174px;
+      margin: 24px 0;
+    }
+    .c-footer {
+      div:first-child button {
+        font-size: .76rem;
+      }
+      .comments {
+        div .comments-wrap, div:last-child .comments-wrap {
+          width: 260px;
+          padding: 10px 0;
+        }
+        .mid .comments-wrap {
+          width: 220px;
+        }
+      }
+    }
+  }
+}
+@include breakpoint($w450) {
+  body {
+    font-size: .8rem;
+  }
+  main .section {
+    padding: 20px 28px;
+    a {
+      padding: 20px 0;
+      font-size: 1.2rem;
+    }
+  }
+  h1 {
+    font-size: 2.6rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+    margin: 14px 0 46px 0;
+  }
+  .m-main {
+    width: 362px;
+    button {
+      margin-top: 214px;
+    }
+  }
+  .m-header {
+    width: 356px;
+    margin: 48px auto 18px auto;
+  }
+  .m-content {
+    width: 276px;
+    .c-header {
+      height: 140px;
+    }
+    h3 {
+      font-size: 2.2rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+    p {
+      margin-left: 20px;
+      font-size: .8rem;
+    }
+    p, img {
+      width: 238px;
+    }
+    img {
+      height: 160px;
+    }
+    i {
+      transform: none;
+    }
+    .c-footer {
+      div:first-child button {
+        height: 62px;
+      }
+      .comments {
+        padding: 20px 12px 0 12px;
+        div .comments-wrap, div:last-child .comments-wrap {
+          margin: 30px auto;
+          width: 240px;
+        }
+        .mid .comments-wrap {
+          width: 216px;
+        }
+      }
+    }
+  }
+}
+@include breakpoint($w400) {
+  .modal button {
+    width: 22px;
+    height: 22px;
+  }
+  .m-header {
+    width: 294px;
+    button {
+      background-position: -69px -4943px;
+    }
+  }
+  .m-main {
+    width: 300px;
+    button:first-child {
+      background-position: -36px -4942px;
+      margin-right: 6px;
+    }
+    button:last-child {
+      margin-left: 6px;
+      background-position: -3px -4942px;
+    }
+  }
+  .m-content {
+    width: 242px;
+    .c-header {
+      height: 112px;
+    }
+    h3 {
+      font-size: 2rem;
+    }
+    h4 {
+      font-size: .9rem;
+    }
+    p, img {
+      width: 200px;
+    }
+    img {
+      height: 132px;
+    }
+    .c-footer {
+      a {
+        width: 32px;
+        height: 32px;
+        margin: 0 14px;
+      }
+      a:first-child {
+        background-position: 91.30434782608695% 95.23809523809524%;
+      }
+      a:first-child+a {
+        background-position: 43.47826086956522% 85.71428571428571%;
+      }
+      a:last-child {
+        background-position: 65.21739130434783% 95.23809523809524%;
+      }
+      .comments {
+        div .comments-wrap, div:last-child .comments-wrap {
+          width: 208px;
+        }
+        .mid .comments-wrap {
+          width: 180px;
+        }
+      }
+    }
+  }
+}
+
+

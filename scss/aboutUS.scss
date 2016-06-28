@@ -1,0 +1,279 @@
+@font-face {
+  font-family: "Lato";
+  src: url("../font/Lato/Lato-Regular.woff2") format('woff2'),
+  url("../font/Lato/Lato-Regular.woff") format('woff'),
+  url("../font/Lato/Lato-Regular.ttf") format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("../font/Lato/Lato-Bold.woff2") format('woff2'),
+  url("../font/Lato/Lato-Bold.woff") format('woff'),
+  url("../font/Lato/Lato-Bold.ttf") format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: "Merriweather";
+  src: url("../font/Merriweather/Merriweather-Regular.woff2") format('woff2'),
+  url("../font/Merriweather/Merriweather-Regular.woff") format('woff'),
+  url("../font/Merriweather/Merriweather-Regular.ttf") format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: "Merriweather-Light";
+  src: url("../font/Merriweather/Merriweather-Light.woff2") format('woff2'),
+  url("../font/Merriweather/Merriweather-Light.woff") format('woff'),
+  url("../font/Merriweather/Merriweather-Light.ttf") format('truetype');
+  font-style: normal;
+}
+@import "mixed.scss";
+@import "../scss/header.scss";
+.common-h1 {
+  color: $yellow;
+}
+.webkit-h1 {
+  @include webkit-h1;
+}
+body {
+  @include main;
+  @include lato(300, 1.2rem, 1.4);
+  @include border(4px);
+  text-align: center;
+  background: url("../img/cube.png") no-repeat left center $dark;
+  color: $grey;
+  cursor: default;
+}
+p {
+  margin: 0;
+}
+i {
+  @include mw(400, .8rem, uppercase);
+  width: 20px;
+  @include flexy(center, center);
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h1 {
+  @include h-1(6.6rem, 1);
+  margin: 40px auto 0 auto;
+}
+h2 {
+  @include h-2(1.8rem, 1);
+  margin: 14px auto 40px auto;
+}
+h3 {
+  font-size: 1.8rem;
+  line-height: 1;
+  color: #fff;
+  margin: 10px 0;
+}
+main {
+  line-height: 1.6;
+  .text {
+    margin: 28px auto;
+    width: 760px;
+  }
+  p {
+    text-align: justify;
+  }
+  .wrap:first-child {
+    margin-bottom: 20px;
+  }
+}
+.wrap {
+  overflow: auto;
+  @include flexy(center,  center);
+  div {
+    float: left;
+    width: 366px;
+    height: 263px;
+    background: $black;
+  }
+  div:last-child {
+    margin-left: 28px;
+  }
+}
+.footer {
+  margin-top: 100px;
+  div {
+    margin: 0 auto;
+    overflow: auto;
+  }
+  div:first-child {
+    padding: 10px;
+    width: 40px;
+  }
+  .city {
+    margin: 40px auto;
+    text-align: left;
+    text-transform: uppercase;
+    -moz-transform: matrix( 0.99990666320975,0,0,1.00001496669909,0,0);
+    -webkit-transform: matrix( 0.99990666320975,0,0,1.00001496669909,0,0);
+    -ms-transform: matrix( 0.99990666320975,0,0,1.00001496669909,0,0);
+    width: 900px;
+    div {
+      font-size: .8rem;
+      width: 328px;
+    }
+    div:first-child {
+      float: left;
+      padding: 0;
+    }
+    div:last-child {
+      float: right;
+    }
+    a {
+      display: block;
+      margin-top: 28px;
+      color: $grey;
+      font-size: .8rem;
+      line-height: 2;
+    }
+  }
+  .city+div {
+    font-size: .6rem;
+    line-height: 2;
+    margin-bottom: 40px;
+  }
+  span {
+    color: $yellow;
+  }
+}
+@include breakpoint($thousand) {
+  body {
+    font-size: 1rem;
+  }
+  .wrap div {
+    width: 258px;
+    height: 200px;
+  }
+  main {
+    .text {
+      width: 544px;
+    }
+  }
+  .footer {
+    margin-top: 80px;
+    .city {
+      width: 600px;
+      margin: 28px auto 40px auto;
+      div {
+        width: 220px;
+      }
+    }
+  }
+  h1 {
+    font-size: 6rem;;
+  }
+  h2 {
+    font-size: 1.6rem;;
+  }
+}
+@include breakpoint($w700) {
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+    margin: 10px auto 28px auto;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  main .text {
+    width: 400px;
+  }
+  .wrap {
+    display: block;
+    margin: 0 auto;
+    div {
+      float: none;
+      width: 400px;
+      height: 240px;
+      margin: 10px auto;
+    }
+    div:first-child {
+      margin: 0 auto 20px auto;
+    }
+    div:last-child {
+      margin: 0 auto;
+    }
+  }
+  .footer .city {
+    width: 480px;
+    div {
+      width: 188px;
+      line-height: 1.6;
+    }
+  }
+}
+@include breakpoint($w579) {
+  h1 {
+    margin: 0 auto;
+    font-size: 4.4rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  main .text {
+    width: 320px;
+  }
+  .wrap div {
+    width: 320px;
+    height: 200px;
+  }
+  .footer {
+    margin-top: 40px;
+    .city {
+      width: 420px;
+    }
+  }
+}
+@include breakpoint($w510) {
+  .footer .city {
+    width: 400px;
+  }
+}
+@include breakpoint($w450) {
+  h1 {
+    font-size: 3.2rem;
+  }
+  h2 {
+    font-size: 1rem;
+    margin: 10px auto 0 auto;
+  }
+  main .text {
+    width: 210px;
+  }
+  .wrap div {
+    width: 210px;
+    height: 140px;
+  }
+  .footer {
+    .city {
+      width: auto;
+      margin: 12px auto 40px auto;
+      div {
+        width: 210px;
+      }
+      div:first-child, div:last-child {
+        float: none;
+      }
+      div:first-child {
+        margin-bottom: 40px;
+      }
+      a {
+        margin-top: 16px;
+      }
+    }
+    .city+div {
+      margin-bottom: 28px;
+    }
+    i {
+      font-size: .6rem;
+    }
+  }
+}

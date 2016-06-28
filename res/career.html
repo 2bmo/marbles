@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link type="text/css" rel="stylesheet" href="css/career.css">
+    <link type="text/css" rel="stylesheet" href="fullPage/jquery.fullPage.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script type="text/javascript" src="fullPage/vendors/scrolloverflow.min.js"></script>
+    <script src="fullPage/vendors/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="fullPage/jquery.fullPage.min.js"></script>
+    <title>Career</title>
+</head>
+<body>
+<div id="fp">
+    <div class="section">
+        <div class="slide">
+            <h3>OPEN POSITIONS IN STOCKHOLM</h3>
+            <a>
+                <p>TEAM: DESIGN</p>
+                <p>UI / UX DESIGNER</p>
+                <p>EXPIRES: 22.12.2014</p>
+            </a>
+            <a>
+                <p>TEAM: DESIGN</p>
+                <p>UI / UX DESIGNER</p>
+                <p>EXPIRES: 22.12.2014</p>
+            </a>
+            <a>
+                <p>TEAM: DESIGN</p>
+                <p>UI / UX DESIGNER</p>
+                <p>EXPIRES: 22.12.2014</p>
+            </a>
+            <a>
+                <p>TEAM: DESIGN</p>
+                <p>UI / UX DESIGNER</p>
+                <p>EXPIRES: 22.12.2014</p>
+            </a>
+        </div>
+        <div class="slide active">
+            <header class="header">
+                <div>
+                    <i>M</i>
+                    <p>Chapter 6</p>
+                    <a href="index.html"></a>
+                </div>
+                <div>
+                </div>
+            </header>
+            <main>
+                <h1 class="common-h1">CAREER</h1>
+                <h2>Currently opened positions</h2>
+                <div class="wrap">
+                    <div>
+                        <h3>STOCKHOLM</h3>
+                        <a id="stockholm">CONTACT<span></span></a>
+                    </div>
+                    <div>
+                        <h3>BELGRADE</h3>
+                        <a id="belgrade">CONTACT<span></span></a>
+                    </div>
+                </div>
+                <p>We're always looking for new employers<br>
+                   Send us your application to careers@marbles.com
+                </p>
+            </main>
+            <footer class="footer">
+                <div><i>M</i></div>
+                <div class="city">
+                    <div>
+                        <h3>STOCKHOLM</h3>
+                        <p><span>WORK:</span> WORK@MARBLES.COM</p>
+                        <p><span>PHONE:</span> +381695403605</p>
+                        <p><span>ADDRESS:</span> KNEZ MIHAJLOVA 14/22, BELGRADE SERBIA</p>
+                        <a href="">VIEW MAP</a>
+                    </div>
+                    <div>
+                        <h3>BELGRADE</h3>
+                        <p><span>WORK:</span> WORK@MARBLES.COM</p>
+                        <p><span>PHONE:</span> +381695403605</p>
+                        <p><span>ADDRESS:</span> KNEZ MIHAJLOVA 14/22, BELGRADE SERBIA</p>
+                        <a href="">VIEW MAP</a>
+                    </div>
+                </div>
+                <div><p>ALL RIGHTS RESERVED MARBLES 2014.</p></div>
+            </footer>
+        </div>
+        <div class="slide">
+                <h3>OPEN POSITIONS IN BELGRADE</h3>
+                <a>
+                    <p>TEAM: DESIGN</p>
+                    <p>UI / UX DESIGNER</p>
+                    <p>EXPIRES: 22.12.2014</p>
+                </a>
+                <a>
+                    <p>TEAM: DESIGN</p>
+                    <p>UI / UX DESIGNER</p>
+                    <p>EXPIRES: 22.12.2014</p>
+                </a>
+                <a>
+                    <p>TEAM: DESIGN</p>
+                    <p>UI / UX DESIGNER</p>
+                    <p>EXPIRES: 22.12.2014</p>
+                </a>
+                <a>
+                    <p>TEAM: DESIGN</p>
+                    <p>UI / UX DESIGNER</p>
+                    <p>EXPIRES: 22.12.2014</p>
+                </a>
+            </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        $('#fp').fullpage({
+            controlArrows: false,
+            scrollOverflow: true,
+            verticalCentered:false
+        });
+        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if (isChrome) {
+            $('h1').removeClass('common-h1').addClass('webkit-h1');
+        }
+    });
+    $(document).on('click', '#belgrade', function(){
+        $.fn.fullpage.moveSlideRight();
+    });
+    $(document).on('click', '#stockholm', function(){
+        $.fn.fullpage.moveSlideLeft();
+    });
+</script>
+</body>
+</html>

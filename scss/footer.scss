@@ -1,0 +1,119 @@
+@import "../scss/mixed.scss";
+.footer {
+  margin-top: 100px;
+  h3 {
+    font: 900 1.8rem "Lato-Bold", sans-serif;
+    line-height: 1;
+    color: #fff;
+    margin: 10px 0;
+  }
+  i {
+    @include mw(400, .8rem, uppercase);
+    width: 20px;
+    @include flexy(center, center);
+  }
+  div {
+    margin: 0 auto;
+    overflow: auto;
+  }
+  div:first-child {
+    padding: 10px;
+    width: 40px;
+  }
+  .city {
+    margin: 40px auto;
+    text-align: left;
+    text-transform: uppercase;
+    -moz-transform: matrix( 0.99990666320975,0,0,1.00001496669909,0,0);
+    -webkit-transform: matrix( 0.99990666320975,0,0,1.00001496669909,0,0);
+    -ms-transform: matrix( 0.99990666320975,0,0,1.00001496669909,0,0);
+    width: 900px;
+    div {
+      @include lato(300, .8rem, 1.6);
+      width: 328px;
+    }
+    div:first-child {
+      float: left;
+      padding: 0;
+    }
+    div:last-child {
+      float: right;
+    }
+    a {
+      display: block;
+      margin-top: 28px;
+      color: $grey;
+      font-size: .8rem;
+      line-height: 2;
+    }
+  }
+  .city+div {
+    font-size: .6rem;
+    line-height: 2;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  span {
+    color: $yellow;
+  }
+}
+@include breakpoint($thousand) {
+  .footer {
+    margin-top: 80px;
+    .city {
+      width: 600px;
+      margin: 28px auto 40px auto;
+      div {
+        width: 220px;
+      }
+    }
+  }
+}
+@include breakpoint($w700) {
+  .footer .city {
+    width: 480px;
+    div {
+      width: 188px;
+    }
+  }
+  .footer h3 {
+    font-size: 1.4rem;
+  }
+}
+@include breakpoint($w579) {
+  .footer {
+    margin-top: 40px;
+    .city {
+      width: 420px;
+    }
+  }
+}
+@include breakpoint($w510) {
+  .footer .city {
+    width: 400px;
+  }
+}
+@include breakpoint($w450) {
+  .footer .city {
+    width: auto;
+    margin: 12px auto 40px auto;
+    div {
+      width: 210px;
+    }
+    div:first-child, div:last-child {
+      float: none;
+    }
+    div:first-child {
+      margin-bottom: 40px;
+    }
+    a {
+      margin-top: 16px;
+    }
+  }
+  .footer .city+div {
+    margin-bottom: 28px;
+  }
+  i {
+    @include mw(400, .6rem, uppercase);
+  }
+}

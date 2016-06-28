@@ -1,0 +1,299 @@
+@font-face {
+  font-family: "Lato";
+  src: url("../font/Lato/Lato-Regular.woff2") format('woff2'),
+  url("../font/Lato/Lato-Regular.woff") format('woff'),
+  url("../font/Lato/Lato-Regular.ttf") format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("../font/Lato/Lato-Bold.woff2") format('woff2'),
+  url("../font/Lato/Lato-Bold.woff") format('woff'),
+  url("../font/Lato/Lato-Bold.ttf") format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: "Merriweather";
+  src: url("../font/Merriweather/Merriweather-Regular.woff2") format('woff2'),
+  url("../font/Merriweather/Merriweather-Regular.woff") format('woff'),
+  url("../font/Merriweather/Merriweather-Regular.ttf") format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: "Merriweather-Light";
+  src: url("../font/Merriweather/Merriweather-Light.woff2") format('woff2'),
+  url("../font/Merriweather/Merriweather-Light.woff") format('woff'),
+  url("../font/Merriweather/Merriweather-Light.ttf") format('truetype');
+  font-style: normal;
+}
+@import "../scss/mixed.scss";
+@import "../scss/header.scss";
+.common-h1 {
+  color: $yellow;
+}
+.webkit-h1 {
+  background: linear-gradient(to right, rgba(237,197,128,1) 0%, rgba(237,197,128,1) 41%, rgba(216,180,114,1) 47%, rgba(204,173,105,1) 50%, rgba(176,150,90,1) 53%, rgba(176,150,90,1) 100%);
+  -webkit-background-clip: text;
+  color: rgba(0, 0, 0, 0);
+}
+body {
+  @include main;
+  @include border(4px);
+  text-align: center;
+  color: $grey;
+  background: $dark;
+  cursor: default;
+  font: 300 1.4rem 'Lato', sans-serif;
+  line-height: 1.6;
+}
+p {
+  margin: 0;
+}
+a {
+  @include a-none;
+}
+h1 {
+  @include h-1(5.6rem, 1);
+  margin: 40px 0 0 0;
+}
+h2 {
+  @include h-2(1.6rem, 1.8);
+  margin: 0;
+}
+.slide:nth-child(2) {
+  background: url("../img/bg-contact.jpg") no-repeat center center;
+  background-size: cover;
+  .wrap {
+    @include flexy(center, center);
+    div {
+      border: solid 1px $grey;
+      width: 260px;
+      height: 302px;
+      margin: 80px 18px 200px 18px;
+      vertical-align: bottom;
+      h3 {
+        color: #fff;
+        font: 900 1.4rem "Lato-Bold", sans-serif;
+        line-height: 2.2;
+        margin: 200px 0 0 0;
+      }
+      a {
+        display: none;
+        color: $yellow;
+        @include lato(300, .8rem, 1);
+      }
+      span {
+        background: url("../img/sprite.view.svg") no-repeat 39.14% 93.6%;
+        padding: 4px 14px;
+      }
+    }
+    div:hover {
+      border-color: $yellow;
+      a {
+        display: block;
+      }
+    }
+  }
+  .footer {
+    margin-bottom: 28px;
+    font-size: .6rem;
+    overflow: auto;
+  }
+}
+.slide:first-child, .slide:last-child {
+  background: $black;
+  color: #fff;
+  h3 {
+    font: 900 2rem "Lato-Bold", sans-serif;
+    line-height: 2.6;
+    text-align: left;
+    padding-left: 40px;
+  }
+  h3, button {
+    color: $yellow;
+    text-transform: uppercase;
+  }
+  button {
+    @include button-none;
+  }
+  .letter button {
+    @include border(1px);
+    width: 140px;
+    height: 52px;
+    border-radius: 24px/50%;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+}
+  .letter {
+    overflow: auto;
+    span {
+      background: url("../img/sprite.view.svg") no-repeat 39.14% 94.8%;
+      padding: 10px;
+    }
+    form {
+      width: 800px;
+      margin: 0 auto 20px auto;
+      @include h-2(1.2rem, 2);
+    }
+    .row {
+      @include flexy(space-between, center);
+      margin-bottom: 20px;
+    }
+    .row div {
+      width: 46%;
+    }
+    input, textarea, select {
+      background: $black;
+      color: #fff;
+      cursor: auto;
+      border: solid 1px $input-border;
+      box-sizing: border-box;
+      @include h-2(1rem, 1.4);
+    }
+    input, select {
+      width: 100%;
+      height: 46px;
+      padding: 0 8px;
+    }
+    textarea {
+      resize: none;
+      width: 100%;
+      height: 180px;
+      padding: 8px;
+    }
+    label, textarea {
+      display: block;
+      text-align: left;
+    }
+  }
+  .map {
+    width: 800px;
+    height: 320px;
+    margin: 20px auto 0 auto;
+    canvas {
+      position: relative !important;
+    }
+    .mapboxgl-control-container {
+      display: none;
+    }
+  }
+@include breakpoint($thousand) {
+    .letter form, .map {
+      width: 700px;
+    }
+}
+@include breakpoint($w900) {
+  .letter form, .map {
+    width: 660px;
+  }
+}
+@include breakpoint($w800) {
+  h1 {
+    font-size: 5.4rem;
+  }
+  .slide:nth-child(2) .wrap div {
+    width: 220px;
+    height: 262px;
+    margin: 68px 18px 240px 18px;
+    h3 {
+      margin: 172px 0 0 0;
+    }
+  }
+  .letter form, .map {
+    width: 600px;
+  }
+}
+@include breakpoint($w700) {
+  h1 {
+    font-size: 4.8rem;
+  }
+  .slide:nth-child(2) .wrap div {
+    width: 200px;
+    height: 240px;
+    margin: 68px 18px 280px 18px;
+    h3 {
+      margin: 160px 0 0 0;
+    }
+  }
+  .letter form, .map {
+    width: 520px;
+  }
+}
+@include breakpoint($w600) {
+  h1 {
+    font-size: 4.4rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  .slide:nth-child(2) .wrap div {
+    width: 180px;
+    height: 220px;
+    margin: 62px 18px 320px 18px;
+    h3 {
+      margin: 140px 0 0 0;
+      font-size: 1.2rem;
+    }
+  }
+  .letter form, .map {
+    width: 420px;
+  }
+  .letter {
+    .row {
+      flex-wrap: wrap;
+      margin-bottom: 0;
+      div {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+@include breakpoint($w500) {
+  .letter form, .map {
+    width: 340px;
+  }
+  .slide:first-child h3, .slide:last-child h3 {
+    text-align: center;
+    padding-left: 0;
+  }
+}
+@include breakpoint($w450) {
+  h1 {
+    margin-top: 20px;
+  }
+  .slide:nth-child(2) .wrap {
+    flex-wrap: wrap;
+    padding: 0 28px;
+    div:first-child {
+      margin: 32px 12px 0 12px;
+    }
+    div:last-child {
+      margin: 32px 12px 180px 12px;
+    }
+  }
+}
+@include breakpoint($w400) {
+  h1 {
+    font-size: 4rem;
+  }
+  .slide:first-child h3, .slide:last-child h3 {
+    font-size: 1.8rem;
+  }
+  .letter form, .map {
+    width: 280px;
+  }
+  .map {
+    height: 260px;
+  }
+}
+@include breakpoint($w320) {
+  h1 {
+    font-size: 3.4rem;
+    margin-top: 40px;
+  }
+  .letter form, .map {
+    width: 260px;
+  }
+}

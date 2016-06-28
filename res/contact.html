@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link type="text/css" rel="stylesheet" href="css/contact.css">
+    <link type="text/css" rel="stylesheet" href="fullPage/jquery.fullPage.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script type="text/javascript" src="fullPage/vendors/scrolloverflow.min.js"></script>
+    <script src="fullPage/vendors/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="fullPage/jquery.fullPage.min.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.20.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.20.0/mapbox-gl.css' rel='stylesheet'>
+    <title>Contact</title>
+</head>
+<body>
+<div id="fp">
+    <div class="section">
+        <div class="slide">
+            <h3>STOCKHOLM OFFICE</h3>
+            <div class="letter">
+                <form method="post">
+                    <div class="row">
+                        <div>
+                            <label for="name">Full Name:</label>
+                            <input type="text" id="name">
+                        </div>
+                        <div>
+                            <label for="email">Email:</label>
+                            <input type="text" id="email">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <label for="phone">Pnone Number:</label>
+                            <input type="text" id="phone">
+                        </div>
+                        <div>
+                            <label for="budget">Budget:</label>
+                            <select id="budget">
+                                <option></option>
+                                <option></option>
+                                <option></option>
+                                <option></option>
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="describe">Quickly Describe Your Project:</label>
+                        <textarea id="describe"></textarea>
+                    </div>
+                </form>
+                <button>SEND<span></span></button>
+            </div>
+            <div id="map-stockholm" class="map"></div>
+        </div>
+        <div class="slide active">
+            <header class="header">
+                <div>
+                    <i>M</i>
+                    <p>Epilog</p>
+                    <a href="index.html"></a>
+                </div>
+                <div>
+                </div>
+            </header>
+            <main>
+                <h1 class="common-h1">CONTACT</h1>
+                <h2>Not just coworkers - family.</h2>
+                <div class="wrap">
+                    <div>
+                        <h3>STOCKHOLM</h3>
+                        <a id="stockholm">CONTACT<span></span></a>
+                    </div>
+                    <div>
+                        <h3>BELGRADE</h3>
+                        <a id="belgrade">CONTACT<span></span></a>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <p>ALL RIGHTS RESERVED MARBLES 2014.</p>
+            </footer>
+        </div>
+        <div class="slide">
+            <h3>BELGRADE OFFICE</h3>
+            <div class="letter">
+                <form method="post">
+                    <div class="row">
+                        <div>
+                            <label for="name1">Full Name:</label>
+                            <input type="text" id="name1">
+                        </div>
+                        <div>
+                            <label for="email1">Email:</label>
+                            <input type="text" id="email1">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <label for="phone1">Pnone Number:</label>
+                            <input type="text" id="phone1">
+                        </div>
+                        <div>
+                            <label for="budget1">Budget:</label>
+                            <select id="budget1">
+                                <option></option>
+                                <option></option>
+                                <option></option>
+                                <option></option>
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="describe1">Quickly Describe Your Project:</label>
+                        <textarea id="describe1"></textarea>
+                    </div>
+                </form>
+                <button>SEND<span></span></button>
+            </div>
+            <div id="map-belgrade" class="map"></div>
+        </div>
+    </div>
+</div>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZmlsa3kiLCJhIjoiY2lvYmpraXdzMDA0NHZqbTVheTJoY2dwMSJ9.99xzuah8HZeQyTZrQWH1hw';
+    if (!mapboxgl.supported()) {
+        alert('Your browser does not support Mapbox GL');
+    } else {
+        var map = new mapboxgl.Map({
+            container: 'map-stockholm',
+            style: 'mapbox://styles/filky/cippf2su6003oe9nlg5vs48b0',
+            center: [18.063289, 59.333047],
+            zoom: 14
+        });
+        map.dragRotate.disable();
+        map.touchZoomRotate.disableRotation();
+        map.scrollZoom.disable();
+        var map1 = new mapboxgl.Map({
+            container: 'map-belgrade',
+            style: 'mapbox://styles/filky/cippf2su6003oe9nlg5vs48b0',
+            center: [20.423531, 44.822401],
+            zoom: 12
+        });
+        map1.dragRotate.disable();
+        map1.touchZoomRotate.disableRotation();
+        map1.scrollZoom.disable();
+    }
+    $(document).ready(function() {
+        $('#fp').fullpage({
+            controlArrows: false,
+            scrollOverflow: true,
+            verticalCentered:false
+        });
+        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if (isChrome) {
+            $('h1').removeClass('common-h1').addClass('webkit-h1');
+        }
+    });
+    $(document).on('click', '#belgrade', function(){
+        $.fn.fullpage.moveSlideRight();
+    });
+    $(document).on('click', '#stockholm', function(){
+        $.fn.fullpage.moveSlideLeft();
+    });
+</script>
+</body>
+</html>

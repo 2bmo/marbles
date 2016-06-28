@@ -1,0 +1,317 @@
+@font-face {
+  font-family: "Lato";
+  src: url("../font/Lato/Lato-Regular.woff2") format('woff2'),
+  url("../font/Lato/Lato-Regular.woff") format('woff'),
+  url("../font/Lato/Lato-Regular.ttf") format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("../font/Lato/Lato-Bold.woff2") format('woff2'),
+  url("../font/Lato/Lato-Bold.woff") format('woff'),
+  url("../font/Lato/Lato-Bold.ttf") format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: "Merriweather";
+  src: url("../font/Merriweather/Merriweather-Regular.woff2") format('woff2'),
+  url("../font/Merriweather/Merriweather-Regular.woff") format('woff'),
+  url("../font/Merriweather/Merriweather-Regular.ttf") format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: "Merriweather-Light";
+  src: url("../font/Merriweather/Merriweather-Light.woff2") format('woff2'),
+  url("../font/Merriweather/Merriweather-Light.woff") format('woff'),
+  url("../font/Merriweather/Merriweather-Light.ttf") format('truetype');
+  font-style: normal;
+}
+@import "../scss/mixed.scss";
+@import "../scss/header.scss";
+.common-h1 {
+  color: $yellow;
+}
+.webkit-h1 {
+  background: linear-gradient(to right, rgba(237,197,128,1) 0%, rgba(237,197,128,1) 4%, rgba(216,180,114,1) 24%, rgba(204,173,105,1) 32%, rgba(187,159,93,1) 36%, rgba(187,159,93,1) 100%);
+  -webkit-background-clip: text;
+  color: rgba(0, 0, 0, 0);
+}
+body {
+  @include main;
+  @include border(4px);
+  text-align: center;
+  background: $dark;
+  color: $grey;
+  cursor: default;
+  font: 300 1.2rem 'Lato', sans-serif;
+  line-height: 1.6;
+}
+p {
+  margin: 0;
+}
+a {
+  @include a-none;
+}
+ul {
+  @include ul-none;
+}
+h1 {
+  @include h-1(6.4rem, 1);
+  margin: 0;
+}
+h2 {
+  @include h-2(1.8rem, 1.4);
+  margin: 0 0 28px 0;
+}
+h3 {
+  color: $yellow;
+  font: 900 1.2rem "Lato-Bold", sans-serif;
+  line-height: 1;
+  margin: 0 0 12px 0;
+}
+main {
+  overflow: auto;
+  padding-top: 40px;
+  text-align: left;
+  div {
+    float: left;
+    overflow: auto;
+  }
+  div:first-child {
+    width: 524px;
+    margin-left: 100px;
+    div {
+      width: 50%;
+    }
+    div:last-child {
+      position: static;
+      height: inherit;
+    }
+  }
+  a:hover, a:active {
+    color: $yellow;
+  }
+  ul:nth-child(2) {
+    margin-bottom: 40px;
+  }
+  div:last-child {
+    width: 1000px;
+    height: 954px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -2;
+    background-size: contain;
+    div {
+      background: $black;
+      color: $yellow;
+      padding: 18px 20px;
+      width: 280px;
+      height: 60px;
+      top: 720px;
+      right: 188px;
+    }
+    i {
+      font: 200 3.8rem 'Merriweather', serif;
+      line-height: 1;
+      display: block;
+      margin-right: 34px;
+    }
+    i, p {
+      float: left;
+    }
+    span {
+      color: $grey;
+    }
+  }
+  .mina {
+    background: url("../img/mina.png") no-repeat center bottom;
+  }
+}
+@include breakpoint($w1500) {
+  main div:last-child {
+    width: 800px;
+    div {
+      padding: 16px 18px;
+      right:112px;
+      width: 260px;
+    }
+  }
+}
+@include breakpoint($w1300) {
+  main div:last-child {
+    width: 700px;
+    div {
+      right:80px;
+      top: 740px;
+    }
+  }
+}
+@include breakpoint($w1230) {
+  main div:first-child {
+    margin-left: 80px;
+  }
+}
+@include breakpoint($w1200) {
+  main {
+    div:first-child {
+      margin-left: 60px;
+    }
+    div:last-child {
+      width: 648px;
+    }
+  }
+}
+@include breakpoint($w1100) {
+  main {
+    div:first-child {
+      width: 400px;
+    }
+    div:last-child {
+      width: 600px;
+      div {
+        width: 236px;
+        padding: 14px;
+      }
+      i {
+        font-size: 3.4rem;
+      }
+      p {
+        line-height: 1.4;
+      }
+    }
+  }
+  h1 {
+    font-size: 6rem;
+  }
+}
+@include breakpoint($thousand) {
+  body {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 5.6rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+  main div:last-child {
+      background-position: left top;
+      background-size: cover;
+    i {
+      font-size: 3rem;
+    }
+    div {
+      width: 204px;
+      padding: 12px 12px 0 12px;
+    }
+  }
+}
+@include breakpoint($w900) {
+  main div:last-child {
+    width: 500px;
+  }
+}
+@include breakpoint($w800) {
+  main div:first-child {
+    margin-left: 40px;
+    width: 340px;
+  }
+}
+@include breakpoint($w700) {
+  h1 {
+    font-size: 5.4rem;
+  }
+  main {
+    padding-top: 20px;
+    div:first-child {
+      width: 520px;
+    }
+    div:last-child {
+      width: 100%;
+      top: 720px;
+      height: 540px;
+      div {
+        right: 40px;
+        top: 420px;
+      }
+    }
+  }
+}
+@include breakpoint($w600) {
+  h1 {
+    font-size: 5.2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  main {
+    padding-top: 0;
+    div:first-child {
+      width: 438px;
+    }
+  }
+  body {
+    padding-bottom: 26px;
+  }
+}
+@include breakpoint($w500) {
+  h1 {
+    font-size: 4.8rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  main {
+    div:first-child {
+      margin-left: 28px;
+      width: 334px;
+    }
+    div:last-child {
+      height: 440px;
+      top: 706px;
+      div {
+        top: 340px;
+        right: 28px;
+      }
+    }
+  }
+}
+@include breakpoint($w450) {
+  h1 {
+    font-size: 4.4rem;
+  }
+  main {
+    padding-top: 12px;
+    div:last-child {
+      top: 652px;
+      height: 400px;
+      div {
+        top: 300px;
+      }
+    }
+  }
+}
+@include breakpoint($w400) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  main {
+    div:first-child {
+      margin-left: 20px;
+      width: 280px;
+    }
+    div:last-child {
+      top:640px;
+      div {
+        right: 18px;
+      }
+    }
+  }
+}
