@@ -284,13 +284,3 @@ main {
     margin-bottom: 28px; }
   .footer i {
     font-size: .6rem; } }
-ast-child {
-      float: none; }
-    .footer .city div:first-child {
-      margin-bottom: 40px; }
-    .footer .city a {
-      margin-top: 16px; }
-  .footer .city + div {
-    margin-bottom: 28px; }
-  .footer i {
-    font-size: .6rem; } }

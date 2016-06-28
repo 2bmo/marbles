@@ -1,3 +1,10 @@
-.idea/**/*
+.idea
 *.iml
-*.xml
+node_modules
+bower_components
+res/css/img/view
+res/css/img/intermediate-svg
+scss/img
+res/css/mixed.css
+res/css/footer.css
+res/css/header.css
