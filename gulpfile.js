@@ -3,7 +3,8 @@ var gulp = require('gulp'),
     useref = require('gulp-useref'),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create(),
-    runSequence = require('run-sequence');
+    runSequence = require('run-sequence'),
+    svgSprite = require('gulp-svg-sprite');
 
 gulp.task('sass', function() {
     return gulp.src('scss/**/*.scss')
@@ -43,3 +44,34 @@ gulp.task('default', function (callback) {
         callback
     )
 });
+gulp.task('default', function (callback) {
+    runSequence(['sass', 'auto', 'useref', 'watch'],
+        callback
+    )
+});
+gulp.task('sprite', function() {
+    config = {
+        shape: {
+            dimension: {
+                maxWidth: 32,
+                maxHeight: 32
+            },
+            spacing: {
+                padding: 8
+            },
+            dest: 'intermediate'
+        },
+        mode: {
+            view: {
+                bust: false,
+                render: {
+                    scss: true
+                }
+            },
+        }
+    };
+
+    gulp.src('**/*.svg', {cwd: 'scss/img'})
+        .pipe(svgSprite(config))
+        .pipe(gulp.dest('res/img'));
+})
