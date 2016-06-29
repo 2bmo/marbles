@@ -45,6 +45,9 @@ button {
 a {
   @include a-none;
 }
+ul {
+  @include ul-none;
+}
 #fp {
   color: $grey;
   line-height: 1.6;
@@ -86,14 +89,9 @@ a {
     width: 180px;
     height: 60px;
     color: $yellow;
-    i {
-      background: url("../img/sprite.view.svg") no-repeat  80% 83.2%;
-      position: static;
-      display: block;
-      float: right;
-      padding-right: 14px;
-      width: 12px;
-      height: 12px;
+    span {
+      background: url("../img/sprite.view.svg") no-repeat  39.13043% 94.4%;
+      padding: 8px 14px;
     }
   }
   button:focus {
@@ -129,18 +127,21 @@ a {
     overflow: auto;
     @include flexy(center, center);
     flex-wrap: wrap;
-    div {
+    section {
       float: left;
       width: 180px;
       height: 196px;
       padding: 20px;
       box-sizing: border-box;
+      display: block;
     }
-    div:hover {
+    section:hover {
       @include border(1px);
+      padding: 19px;
     }
-    div:active {
+    section:active {
       border: solid 1px $grey;
+      padding: 19px;
     }
     a {
       display: block;
@@ -156,7 +157,6 @@ a {
       width: 60px;
       height: 60px;
       margin: 0 auto 12px auto;
-      background: url("../img/sprite.view.svg") no-repeat;
     }
     h3 {
       color: $yellow;
@@ -166,35 +166,29 @@ a {
       text-transform: none;
     }
   }
-  .row:nth-child(2) {
-    div:first-child i {
-      background-position: 90.9090909090909% 15%;
+  .book {
+    background: url("../img/sprite.view.svg") no-repeat 90.9090909090909% 15%;
     }
-    div:first-child+div i {
-      background-position: 0 100%;
+  .sand {
+    background: url("../img/sprite.view.svg") no-repeat 0 100%;
     }
-    div:last-child i {
-      background-position: 90.9090909090909% 75%;
-    }
+  .ava {
+    background: url("../img/sprite.view.svg") no-repeat 90.9090909090909% 75%;
   }
-  .row:nth-child(3) {
-    div:first-child i {
-      background-position: 13.636363636363637% 100%;
-    }
-    div:first-child+div i {
-      background-position: 27.272727272727273% 100%;
-    }
-    div:last-child i {
-      background-position: 45.45454545454545% 75%;
-    }
+  .tab {
+    background: url("../img/sprite.view.svg") no-repeat 13.636363636363637% 100%;
   }
-  .row:nth-child(4) {
-    div:first-child i {
-      background-position: 90.9090909090909% 45%;
-    }
-    div:first-child+div i {
-      background-position: 72.72727272727273% 75%;
-    }
+  .page {
+    background: url("../img/sprite.view.svg") no-repeat 27.272727272727273% 100%;
+  }
+  .notebook {
+    background: url("../img/sprite.view.svg") no-repeat 45.45454545454545% 75%;
+  }
+  .handshake {
+    background: url("../img/sprite.view.svg") no-repeat 90.9090909090909% 45%;
+  }
+  .mail {
+    background: url("../img/sprite.view.svg") no-repeat 72.72727272727273% 75%;
   }
   .menu-footer {
     padding: 100px 0 8px 0;
@@ -203,27 +197,29 @@ a {
       @include lato(300, .8rem, 1);
       text-transform: uppercase;
     }
-    div {
+    ul {
       @include flexy(center, center);
       margin-bottom: 12px;
+    }
+    li {
+      float: left;
     }
     a {
       width: 40px;
       height: 28px;
       display: block;
-      background: url("../img/sprite.view.svg") no-repeat;
     }
-    a:first-child {
-      background-position: 86.95652173913044% 85.71428571428571%;
+    .be {
+      background: url("../img/sprite.view.svg") no-repeat 86.95652173913044% 85.71428571428571%;
     }
-    a:nth-child(2) {
-      background-position: 100% 11.6%;
+    .ball {
+      background: url("../img/sprite.view.svg") no-repeat 100% 11.6%;
     }
-    a:nth-child(3) {
-      background-position: 52.17391304347826% 85.71428571428571%;
+    .fb {
+      background: url("../img/sprite.view.svg") no-repeat 52.17391304347826% 85.71428571428571%;
     }
-    a:last-child {
-      background-position: 73.91304347826087% 94.6%;
+    .tw {
+      background: url("../img/sprite.view.svg") no-repeat 73.91304347826087% 94.6%;
     }
 
   }
@@ -330,7 +326,7 @@ a {
       width: 340px;
     }
     i {
-        left: 40px;
+      left: 40px;
     }
     h1 {
       font-size: 4.8rem;

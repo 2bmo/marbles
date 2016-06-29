@@ -31,6 +31,13 @@
     div {
       @include lato(300, .8rem, 1.6);
       width: 328px;
+      a {
+        margin: 0;
+        display: inline;
+      }
+      a:hover {
+        color: #fff;
+      }
     }
     div:first-child {
       float: left;
@@ -40,11 +47,12 @@
       float: right;
     }
     a {
-      display: block;
-      margin-top: 28px;
       color: $grey;
       font-size: .8rem;
       line-height: 2;
+    }
+    p:last-child {
+     margin: 28px 0 0 0;
     }
   }
   .city+div {
@@ -106,8 +114,8 @@
     div:first-child {
       margin-bottom: 40px;
     }
-    a {
-      margin-top: 16px;
+    p:last-child {
+      margin: 16px 0 0 0;
     }
   }
   .footer .city+div {

@@ -17,27 +17,36 @@
 <div id="fp">
     <div class="section">
         <div class="slide">
-            <h3>OPEN POSITIONS IN STOCKHOLM</h3>
-            <a>
-                <p>TEAM: DESIGN</p>
-                <p>UI / UX DESIGNER</p>
-                <p>EXPIRES: 22.12.2014</p>
-            </a>
-            <a>
-                <p>TEAM: DESIGN</p>
-                <p>UI / UX DESIGNER</p>
-                <p>EXPIRES: 22.12.2014</p>
-            </a>
-            <a>
-                <p>TEAM: DESIGN</p>
-                <p>UI / UX DESIGNER</p>
-                <p>EXPIRES: 22.12.2014</p>
-            </a>
-            <a>
-                <p>TEAM: DESIGN</p>
-                <p>UI / UX DESIGNER</p>
-                <p>EXPIRES: 22.12.2014</p>
-            </a>
+            <h3>OPEN POSITIONS IN BELGRADE</h3>
+            <ul>
+                <li><a>
+                    <p>TEAM: DESIGN</p>
+                    <p>UI / UX DESIGNER</p>
+                    <p>EXPIRES: 22.12.2014</p>
+                </a>
+                </li>
+                <li>
+                    <a>
+                        <p>TEAM: DESIGN</p>
+                        <p>UI / UX DESIGNER</p>
+                        <p>EXPIRES: 22.12.2014</p>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <p>TEAM: DESIGN</p>
+                        <p>UI / UX DESIGNER</p>
+                        <p>EXPIRES: 22.12.2014</p>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <p>TEAM: DESIGN</p>
+                        <p>UI / UX DESIGNER</p>
+                        <p>EXPIRES: 22.12.2014</p>
+                    </a>
+                </li>
+            </ul>
         </div>
         <div class="slide active">
             <header class="header">
@@ -71,15 +80,15 @@
                 <div class="city">
                     <div>
                         <h3>STOCKHOLM</h3>
-                        <p><span>WORK:</span> WORK@MARBLES.COM</p>
-                        <p><span>PHONE:</span> +381695403605</p>
+                        <p><span>WORK:</span> <a>WORK@MARBLES.COM</a></p>
+                        <p><span>PHONE:</span> <a>+381695403605</a></p>
                         <p><span>ADDRESS:</span> KNEZ MIHAJLOVA 14/22, BELGRADE SERBIA</p>
                         <a href="">VIEW MAP</a>
                     </div>
                     <div>
                         <h3>BELGRADE</h3>
-                        <p><span>WORK:</span> WORK@MARBLES.COM</p>
-                        <p><span>PHONE:</span> +381695403605</p>
+                        <p><span>WORK:</span> <a>WORK@MARBLES.COM</a></p>
+                        <p><span>PHONE:</span> <a>+381695403605</a></p>
                         <p><span>ADDRESS:</span> KNEZ MIHAJLOVA 14/22, BELGRADE SERBIA</p>
                         <a href="">VIEW MAP</a>
                     </div>
@@ -89,32 +98,43 @@
         </div>
         <div class="slide">
                 <h3>OPEN POSITIONS IN BELGRADE</h3>
-                <a>
-                    <p>TEAM: DESIGN</p>
-                    <p>UI / UX DESIGNER</p>
-                    <p>EXPIRES: 22.12.2014</p>
-                </a>
-                <a>
-                    <p>TEAM: DESIGN</p>
-                    <p>UI / UX DESIGNER</p>
-                    <p>EXPIRES: 22.12.2014</p>
-                </a>
-                <a>
-                    <p>TEAM: DESIGN</p>
-                    <p>UI / UX DESIGNER</p>
-                    <p>EXPIRES: 22.12.2014</p>
-                </a>
-                <a>
-                    <p>TEAM: DESIGN</p>
-                    <p>UI / UX DESIGNER</p>
-                    <p>EXPIRES: 22.12.2014</p>
-                </a>
-            </div>
+                <ul>
+                    <li><a>
+                            <p>TEAM: DESIGN</p>
+                            <p>UI / UX DESIGNER</p>
+                            <p>EXPIRES: 22.12.2014</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <p>TEAM: DESIGN</p>
+                            <p>UI / UX DESIGNER</p>
+                            <p>EXPIRES: 22.12.2014</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <p>TEAM: DESIGN</p>
+                            <p>UI / UX DESIGNER</p>
+                            <p>EXPIRES: 22.12.2014</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <p>TEAM: DESIGN</p>
+                            <p>UI / UX DESIGNER</p>
+                            <p>EXPIRES: 22.12.2014</p>
+                        </a>
+                    </li>
+                </ul>
+        </div>
     </div>
 </div>
 <script>
     $(document).ready(function() {
         $('#fp').fullpage({
+            anchors: ['page1'],
+            keyboardScrolling: false,
             controlArrows: false,
             scrollOverflow: true,
             verticalCentered:false
@@ -125,10 +145,10 @@
         }
     });
     $(document).on('click', '#belgrade', function(){
-        $.fn.fullpage.moveSlideRight();
+        $.fn.fullpage.moveTo('page1', 2);
     });
     $(document).on('click', '#stockholm', function(){
-        $.fn.fullpage.moveSlideLeft();
+        $.fn.fullpage.moveTo('page1', 0);
     });
 </script>
 </body>

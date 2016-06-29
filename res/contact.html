@@ -152,6 +152,8 @@
     }
     $(document).ready(function() {
         $('#fp').fullpage({
+            anchors: ['page1'],
+            keyboardScrolling: false,
             controlArrows: false,
             scrollOverflow: true,
             verticalCentered:false
@@ -162,10 +164,10 @@
         }
     });
     $(document).on('click', '#belgrade', function(){
-        $.fn.fullpage.moveSlideRight();
+        $.fn.fullpage.moveTo('page1', 2);
     });
     $(document).on('click', '#stockholm', function(){
-        $.fn.fullpage.moveSlideLeft();
+        $.fn.fullpage.moveTo('page1', 0);
     });
 </script>
 </body>

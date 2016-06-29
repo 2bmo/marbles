@@ -130,6 +130,13 @@ h3 {
   color: #fff;
   margin: 10px 0; }
 
+.cube {
+  width: 540px;
+  height: 880px;
+  position: absolute;
+  left: 0;
+  top: 600px; }
+
 main {
   line-height: 1.6; }
   main .text {
@@ -178,11 +185,13 @@ main {
     .footer .city div:last-child {
       float: right; }
     .footer .city a {
-      display: block;
-      margin-top: 28px;
       color: #969696;
       font-size: .8rem;
       line-height: 2; }
+    .footer .city a:hover {
+      color: #fff; }
+    .footer .city p:last-child {
+      margin: 28px 0 0 0; }
   .footer .city + div {
     font-size: .6rem;
     line-height: 2;
@@ -278,8 +287,8 @@ main {
       float: none; }
     .footer .city div:first-child {
       margin-bottom: 40px; }
-    .footer .city a {
-      margin-top: 16px; }
+    .footer .city p:last-child {
+      margin: 16px 0 0 0; }
   .footer .city + div {
     margin-bottom: 28px; }
   .footer i {

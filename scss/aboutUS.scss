@@ -70,6 +70,14 @@ h3 {
   color: #fff;
   margin: 10px 0;
 }
+.cube {
+  width: 540px;
+  height: 880px;
+  position: absolute;
+  left: 0;
+  top: 600px;
+}
+
 main {
   line-height: 1.6;
   .text {
@@ -126,11 +134,15 @@ main {
       float: right;
     }
     a {
-      display: block;
-      margin-top: 28px;
       color: $grey;
       font-size: .8rem;
       line-height: 2;
+    }
+    a:hover {
+      color: #fff;
+    }
+    p:last-child {
+      margin: 28px 0 0 0;
     }
   }
   .city+div {
@@ -265,8 +277,8 @@ main {
       div:first-child {
         margin-bottom: 40px;
       }
-      a {
-        margin-top: 16px;
+      p:last-child {
+        margin: 16px 0 0 0;
       }
     }
     .city+div {

@@ -109,17 +109,22 @@
       font: 300 0.8rem "Lato", sans-serif;
       line-height: 1.6;
       width: 328px; }
+      .footer .city div a {
+        margin: 0;
+        display: inline; }
+      .footer .city div a:hover {
+        color: #fff; }
     .footer .city div:first-child {
       float: left;
       padding: 0; }
     .footer .city div:last-child {
       float: right; }
     .footer .city a {
-      display: block;
-      margin-top: 28px;
       color: #969696;
       font-size: .8rem;
       line-height: 2; }
+    .footer .city p:last-child {
+      margin: 28px 0 0 0; }
   .footer .city + div {
     font-size: .6rem;
     line-height: 2;
@@ -165,8 +170,8 @@
       float: none; }
     .footer .city div:first-child {
       margin-bottom: 40px; }
-    .footer .city a {
-      margin-top: 16px; }
+    .footer .city p:last-child {
+      margin: 16px 0 0 0; }
   .footer .city + div {
     margin-bottom: 28px; }
   i {
@@ -202,6 +207,11 @@ p {
 a {
   text-decoration: none;
   cursor: pointer; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
 
 h1 {
   font: 900 6rem "Lato", sans-serif;

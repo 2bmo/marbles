@@ -44,17 +44,17 @@
      <div class="city">
          <div>
              <h3>STOCKHOLM</h3>
-             <p><span>WORK:</span> WORK@MARBLES.COM</p>
-             <p><span>PHONE:</span> +381695403605</p>
+             <p><span>WORK:</span> <a>WORK@MARBLES.COM</a></p>
+             <p><span>PHONE:</span> <a>+381695403605</a></p>
              <p><span>ADDRESS:</span> KNEZ MIHAJLOVA 14/22, BELGRADE SERBIA</p>
-             <a href="">VIEW MAP</a>
+             <p><a href="">VIEW MAP</a></p>
          </div>
          <div>
              <h3>BELGRADE</h3>
-             <p><span>WORK:</span> WORK@MARBLES.COM</p>
-             <p><span>PHONE:</span> +381695403605</p>
+             <p><span>WORK:</span> <a>WORK@MARBLES.COM</a></p>
+             <p><span>PHONE:</span> <a>+381695403605</a></p>
              <p><span>ADDRESS:</span> KNEZ MIHAJLOVA 14/22, BELGRADE SERBIA</p>
-             <a href="">VIEW MAP</a>
+             <p><a href="">VIEW MAP</a></p>
          </div>
      </div>
      <div>ALL RIGHTS RESERVED MARBLES 2014.</div>
@@ -64,6 +64,13 @@
     if (isChrome) {
         $('h1').removeClass('common-h1').addClass('webkit-h1');
     }
+    var cube= document.getElementById('cube'),
+        ctx= cube.getContext('2d'),
+        img = new Image();
+    img.addEventListener("load", function() {
+        ctx.drawImage(img,0,0,540,880);
+    }, false);
+    img.src = 'img/cube.png';
 </script>
 </body>
 </html>

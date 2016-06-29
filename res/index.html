@@ -22,7 +22,7 @@
                     <h1 class="common-h1">Hello!</h1>
                     <h2>We are Marbles, full digital services agency.</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac velit at sem egestas blandit at a urna. Fusce consectetur rutrum nibh, in scelerisque turpis molestie non. Suspendisse potenti. Cras laoreet risus vitae aliquam vulputate. Fusce quis scelerisque erat. Curabitur tempor lectus in ipsum pharetra, et feugiat nunc ultricies. Duis urna nunc, semper eu nibh sed, dignissim condimentum nunc. Curabitur euismod sem a quam iaculis vulputate. Praesent malesuada vulputate urna vel porttitor. Duis in dolor vel tellus hendrerit consectetur vel at lectus. Quisque tempor scelerisque sagittis. Vestibulum.</p>
-                    <button id="learn">learn more<i></i></button>
+                    <button id="learn">learn more<span></span></button>
                 </div>
             </div>
             <div class="slide">
@@ -31,74 +31,82 @@
                     <button id="back"></button>
                 </header>
                 <div class="row">
-                    <div>
+                    <section>
                         <a href="index.html">
-                            <i></i>
+                            <i class="book"></i>
                             <h3>Prolog</h3>
                             HOME
                         </a>
-                    </div>
-                    <div>
+                    </section>
+                    <section>
                         <a href="aboutUs.html">
-                            <i></i>
+                            <i class="sand"></i>
                             <h3>Chapter 1</h3>
                             <span>ABOUT US</span>
                         </a>
-                    </div>
-                    <div>
+                    </section>
+                    <section>
                         <a href="team.html">
-                            <i></i>
+                            <i class="ava"></i>
                             <h3>Chapter 2</h3>
                             TEAM
                         </a>
-                    </div>
+                    </section>
                 </div>
                 <div class="row">
-                    <div>
+                    <section>
                         <a href="services.html">
-                            <i></i>
+                            <i class="tab"></i>
                             <h3>Chapter 3</h3>
                             SERVICES
                         </a>
-                    </div>
-                    <div>
+                    </section>
+                    <section>
                         <a href="portfolio.html">
-                            <i></i>
+                            <i class="page"></i>
                             <h3>Chapter 4</h3>
                             Portfolio
                         </a>
-                    </div>
-                    <div>
+                    </section>
+                    <section>
                         <a href="blog.html">
-                            <i></i>
+                            <i class="notebook"></i>
                             <h3>Chapter 5</h3>
                             Blog
                         </a>
-                    </div>
+                    </section>
                 </div>
                 <div class="row">
-                    <div>
+                    <section>
                         <a href="career.html">
-                            <i></i>
+                            <i class="handshake"></i>
                             <h3>Chapter 6</h3>
                             Career
                         </a>
-                    </div>
-                    <div>
+                    </section>
+                    <section>
                         <a href="contact.html">
-                            <i></i>
+                            <i class="mail"></i>
                             <h3>Epilog</h3>
                             Contact
                         </a>
-                    </div>
+                    </section>
                 </div>
                 <footer class="menu-footer">
-                    <div>
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
-                    </div>
+                    <ul>
+                        <li>
+                            <a href="" class="be"></a>
+                        </li>
+                        <li>
+                            <a href="" class="ball"></a>
+                        </li>
+                        <li>
+                            <a href="" class="fb"></a>
+                        </li>
+                        <li>
+                            <a href="" class="tw"></a>
+                        </li>
+                    </ul>
                     <p>
                         COPYRIGHT &copy; 2014 THEMENAME
                     </p>
@@ -109,6 +117,8 @@
 <script>
     $(document).ready(function() {
         $('#fp').fullpage({
+            anchors: ['page1'],
+            keyboardScrolling: false,
             controlArrows: false,
             scrollOverflow: true
         });
@@ -118,10 +128,11 @@
         }
     });
     $(document).on('click', '#learn', function(){
-        $.fn.fullpage.moveSlideRight();
+        $.fn.fullpage.moveTo('page1', 1);
     });
     $(document).on('click', '#back', function(){
-        $.fn.fullpage.moveSlideLeft();
+        $.fn.fullpage.moveTo('page1', 0);
+
     });
 </script>
 </body>

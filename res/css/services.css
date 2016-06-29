@@ -109,17 +109,22 @@
       font: 300 0.8rem "Lato", sans-serif;
       line-height: 1.6;
       width: 328px; }
+      .footer .city div a {
+        margin: 0;
+        display: inline; }
+      .footer .city div a:hover {
+        color: #fff; }
     .footer .city div:first-child {
       float: left;
       padding: 0; }
     .footer .city div:last-child {
       float: right; }
     .footer .city a {
-      display: block;
-      margin-top: 28px;
       color: #969696;
       font-size: .8rem;
       line-height: 2; }
+    .footer .city p:last-child {
+      margin: 28px 0 0 0; }
   .footer .city + div {
     font-size: .6rem;
     line-height: 2;
@@ -165,8 +170,8 @@
       float: none; }
     .footer .city div:first-child {
       margin-bottom: 40px; }
-    .footer .city a {
-      margin-top: 16px; }
+    .footer .city p:last-child {
+      margin: 16px 0 0 0; }
   .footer .city + div {
     margin-bottom: 28px; }
   i {
@@ -245,16 +250,16 @@ main {
   margin: 20px;
   background: url("../img/sprite.view.svg") no-repeat; }
 
-.section:first-child .wrap div:first-child i {
+.section:first-child .wrap .bookmark {
   background-position: 90.9090909090909% 0; }
 
-.section:first-child .wrap div:nth-child(2) i {
+.section:first-child .wrap .pen {
   background-position: 90.9090909090909% 60%; }
 
-.section:first-child .wrap div:nth-child(3) i {
+.section:first-child .wrap .monitor {
   background-position: 90.9090909090909% 30%; }
 
-.section:first-child .wrap div:last-child i {
+.section:first-child .wrap .globe {
   background-position: 59.09090909090909% 75%; }
 
 .section:first-child .wrap div div {
@@ -272,43 +277,51 @@ main {
     float: left; }
 
 .section:last-child .wrap {
-  align-items: center;
-  justify-content: center;
-  padding: 100px 0 200px 0;
-  flex-wrap: wrap; }
+  padding: 100px 0 200px 0; }
+  .section:last-child .wrap ul {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
+  .section:last-child .wrap li {
+    float: left;
+    margin: 0 auto; }
   .section:last-child .wrap a {
     background: url("../img/sprite.view.svg") no-repeat;
     width: 100px;
     height: 100px;
-    display: block;
-    margin: 0 auto; }
-  .section:last-child .wrap a:first-child {
+    display: block; }
+  .section:last-child .wrap .adidas {
     background-position: 25% 0; }
-  .section:last-child .wrap a:first-child:hover {
+  .section:last-child .wrap .adidas:hover {
     background-position: 75% 27.77777777777778%; }
-  .section:last-child .wrap a:nth-child(2) {
+  .section:last-child .wrap .google {
     background-position: 25% 83.33333333333333%; }
-  .section:last-child .wrap a:nth-child(2):hover {
+  .section:last-child .wrap .google:hover {
     background-position: 0 83.33333333333333%; }
-  .section:last-child .wrap a:nth-child(3) {
+  .section:last-child .wrap .loreal {
     background-position: 75% 55.55555555555556%; }
-  .section:last-child .wrap a:nth-child(3):hover {
+  .section:last-child .wrap .loreal:hover {
     background-position: 0 0; }
-  .section:last-child .wrap a:nth-child(4) {
+  .section:last-child .wrap .nike {
     background-position: 25% 55.55555555555556%; }
-  .section:last-child .wrap a:nth-child(4):hover {
+  .section:last-child .wrap .nike:hover {
     background-position: 0 55.55555555555556%; }
-  .section:last-child .wrap a:nth-child(5) {
+  .section:last-child .wrap .samsung {
     background-position: 25% 27.77777777777778%; }
-  .section:last-child .wrap a:nth-child(5):hover {
+  .section:last-child .wrap .samsung:hover {
     background-position: 0 27.77777777777778%; }
-  .section:last-child .wrap a:nth-child(6) {
+  .section:last-child .wrap .puma {
     background-position: 50% 27.77777777777778%; }
-  .section:last-child .wrap a:nth-child(6):hover {
+  .section:last-child .wrap .puma:hover {
     background-position: 50% 0; }
-  .section:last-child .wrap a:last-child {
+  .section:last-child .wrap .microsoft {
     background-position: 75% 0; }
-  .section:last-child .wrap a:last-child:hover {
+  .section:last-child .wrap .microsoft:hover {
     background-position: 50% 55.55555555555556%; }
 
 @media (max-width: 1400px) {

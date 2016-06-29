@@ -109,17 +109,22 @@
       font: 300 0.8rem "Lato", sans-serif;
       line-height: 1.6;
       width: 328px; }
+      .footer .city div a {
+        margin: 0;
+        display: inline; }
+      .footer .city div a:hover {
+        color: #fff; }
     .footer .city div:first-child {
       float: left;
       padding: 0; }
     .footer .city div:last-child {
       float: right; }
     .footer .city a {
-      display: block;
-      margin-top: 28px;
       color: #969696;
       font-size: .8rem;
       line-height: 2; }
+    .footer .city p:last-child {
+      margin: 28px 0 0 0; }
   .footer .city + div {
     font-size: .6rem;
     line-height: 2;
@@ -165,8 +170,8 @@
       float: none; }
     .footer .city div:first-child {
       margin-bottom: 40px; }
-    .footer .city a {
-      margin-top: 16px; }
+    .footer .city p:last-child {
+      margin: 16px 0 0 0; }
   .footer .city + div {
     margin-bottom: 28px; }
   i {
@@ -203,6 +208,11 @@ a {
   text-decoration: none;
   cursor: pointer; }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
 h1 {
   font: 900 6.6rem "Lato", sans-serif;
   line-height: 1;
@@ -219,8 +229,9 @@ main {
   main .section {
     text-transform: uppercase;
     background: #121212;
-    padding: 80px 0; }
-    main .section a {
+    padding: 80px 0;
+    display: block; }
+    main .section .white {
       color: #fff;
       display: block;
       line-height: 2.8;
@@ -238,7 +249,7 @@ main {
       padding-right: 20px; }
   main .section:hover, main .section:active, main .section:focus {
     background: #fff; }
-    main .section:hover a, main .section:active a, main .section:focus a {
+    main .section:hover .white, main .section:active .white, main .section:focus .white {
       color: #121212; }
 
 .modal {
@@ -274,10 +285,10 @@ main {
   margin: 0 auto;
   overflow: auto;
   width: 1104px; }
-  .m-main button:first-child {
+  .m-main .left {
     background: url("../img/sprite.view.svg") no-repeat 48% 94.6%;
     margin-right: 20px; }
-  .m-main button:last-child {
+  .m-main .right {
     background: url("../img/sprite.view.svg") no-repeat 39.4% 94.4%;
     margin-left: 20px; }
   .m-main button {
@@ -332,6 +343,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center; }
+  .m-content .c-footer li {
+    float: left; }
   .m-content .c-footer a {
     width: 40px;
     height: 40px;
@@ -339,14 +352,17 @@ main {
     background: url("../img/sprite.view.svg") no-repeat;
     float: left;
     margin: 0 22px; }
-  .m-content .c-footer a:first-child {
+  .m-content .c-footer .tw {
     background-position: 82.6086956521739% 95.23809523809524%; }
-  .m-content .c-footer a:first-child + a {
+  .m-content .c-footer .fb {
     background-position: 100% 0; }
-  .m-content .c-footer a:last-child {
+  .m-content .c-footer .in {
     background-position: 56.52173913043478% 95.23809523809524%; }
   .m-content .c-footer .comments {
     padding: 40px 40px 0 40px; }
+    .m-content .c-footer .comments li {
+      float: left;
+      overflow: auto; }
     .m-content .c-footer .comments div, .m-content .c-footer .comments div:last-child {
       float: none;
       display: block;
@@ -412,7 +428,7 @@ main {
 @media (max-width: 1230px) {
   main .section {
     padding: 60px 0; }
-    main .section a {
+    main .section .white {
       font-size: 2.2rem;
       line-height: 2.6;
       margin: 0 auto; }
@@ -440,9 +456,9 @@ main {
     width: 872px; }
   .m-main {
     width: 900px; }
-    .m-main button:first-child {
+    .m-main .left {
       margin-right: 14px; }
-    .m-main button:last-child {
+    .m-main .right {
       margin-left: 14px; }
     .m-main button {
       margin-top: 544px; }
@@ -485,7 +501,7 @@ main {
 @media (max-width: 900px) {
   h1 {
     font-size: 6rem; }
-  main .section a {
+  main .section .white {
     font-size: 2rem; } }
 
 @media (max-width: 860px) {
@@ -546,7 +562,7 @@ main {
     font-size: 5.6rem; }
   main .section {
     padding: 60px 80px; }
-    main .section a {
+    main .section .white {
       line-height: 1;
       padding: 22px 0; } }
 
@@ -559,9 +575,9 @@ main {
     margin: 104px auto 18px auto; }
   .m-main {
     width: 526px; }
-    .m-main button:first-child {
+    .m-main .left {
       background-position: 48% 93.8%; }
-    .m-main button:last-child {
+    .m-main .right {
       background-position: 39.4% 93.8%; }
     .m-main button {
       margin-top: 344px; }
@@ -624,7 +640,7 @@ main {
 @media (max-width: 545px) {
   main .section {
     padding: 60px 52px; }
-    main .section a {
+    main .section .white {
       padding: 28px 0; } }
 
 @media (max-width: 500px) {
@@ -657,7 +673,7 @@ main {
     font-size: .8rem; }
   main .section {
     padding: 20px 28px; }
-    main .section a {
+    main .section .white {
       padding: 20px 0;
       font-size: 1.2rem; }
   h1 {
@@ -706,15 +722,15 @@ main {
   .m-header {
     width: 294px; }
     .m-header button {
-      background-position: -69px -4943px; }
+      background-position: 60.4% 84%; }
   .m-main {
     width: 300px; }
-    .m-main button:first-child {
-      background-position: -36px -4942px;
+    .m-main .left {
+      background-position: 48.2% 93.3%;
       margin-right: 6px; }
-    .m-main button:last-child {
+    .m-main .right {
       margin-left: 6px;
-      background-position: -3px -4942px; }
+      background-position: 39.6% 93.2%; }
   .m-content {
     width: 242px; }
     .m-content .c-header {
@@ -730,12 +746,13 @@ main {
     .m-content .c-footer a {
       width: 32px;
       height: 32px;
-      margin: 0 14px; }
-    .m-content .c-footer a:first-child {
+      margin: 0 14px;
+      display: block; }
+    .m-content .c-footer .tw {
       background-position: 91.30434782608695% 95.23809523809524%; }
-    .m-content .c-footer a:first-child + a {
+    .m-content .c-footer .fb {
       background-position: 43.47826086956522% 85.71428571428571%; }
-    .m-content .c-footer a:last-child {
+    .m-content .c-footer .in {
       background-position: 65.21739130434783% 95.23809523809524%; }
     .m-content .c-footer .comments div .comments-wrap, .m-content .c-footer .comments div:last-child .comments-wrap {
       width: 208px; }

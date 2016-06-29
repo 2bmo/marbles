@@ -92,16 +92,16 @@ main {
     margin: 20px;
     background: url("../img/sprite.view.svg") no-repeat;
   }
-  div:first-child i {
+  .bookmark {
     background-position: 90.9090909090909% 0;
   }
-  div:nth-child(2) i {
+  .pen {
     background-position: 90.9090909090909% 60%;
   }
-  div:nth-child(3) i {
+  .monitor {
     background-position: 90.9090909090909% 30%;
   }
-  div:last-child i {
+  .globe {
     background-position: 59.09090909090909% 75%;
   }
   div div {
@@ -119,57 +119,63 @@ main {
   }
 }
 .section:last-child .wrap {
-  align-items: center;
-  justify-content: center;
   padding: 100px 0 200px 0;
-  flex-wrap: wrap;
+  ul {
+    width: 100%;
+    @include ul-none;
+    @include flexy(center, center);
+    flex-wrap: wrap;
+  }
+  li {
+    float: left;
+    margin: 0 auto;
+  }
   a {
       background: url("../img/sprite.view.svg") no-repeat;
       width: 100px;
       height: 100px;
       display: block;
-      margin: 0 auto;
   }
-  a:first-child {
+  .adidas {
     background-position: 25% 0;
   }
-  a:first-child:hover {
+  .adidas:hover {
     background-position: 75% 27.77777777777778%;
   }
-  a:nth-child(2) {
+  .google {
     background-position: 25% 83.33333333333333%;
   }
-  a:nth-child(2):hover {
+  .google:hover {
     background-position: 0 83.33333333333333%;
   }
-  a:nth-child(3) {
+  .loreal {
     background-position: 75% 55.55555555555556%;
   }
-  a:nth-child(3):hover {
+  .loreal:hover {
     background-position: 0 0;
   }
-  a:nth-child(4) {
+  .nike {
     background-position: 25% 55.55555555555556%;
   }
-  a:nth-child(4):hover {
+  .nike:hover {
     background-position: 0 55.55555555555556%;
   }
-  a:nth-child(5) {
+  .samsung {
     background-position: 25% 27.77777777777778%;
   }
-  a:nth-child(5):hover {
+  .samsung:hover {
     background-position: 0 27.77777777777778%;
   }
-  a:nth-child(6) {
+  .puma {
     background-position: 50% 27.77777777777778%;
   }
-  a:nth-child(6):hover {
+  .puma:hover {
     background-position: 50% 0;
   }
-  a:last-child {
+  .microsoft {
     background-position: 75% 0;
   }
-  a:last-child:hover {
+  .microsoft:hover {
     background-position: 50% 55.55555555555556%;
   }
 }
