@@ -92,7 +92,7 @@ body {
   line-height: 1.4;
   border: solid 4px #E0BB77;
   text-align: center;
-  background: url("../img/cube.png") no-repeat left center #282828;
+  background: #282828;
   color: #969696;
   cursor: default; }
 
@@ -130,12 +130,12 @@ h3 {
   color: #fff;
   margin: 10px 0; }
 
-.cube {
-  width: 540px;
-  height: 880px;
+.cube-wrap {
   position: absolute;
-  left: 0;
-  top: 600px; }
+  z-index: -1;
+  width: calc(100% - 8px);
+  top: 0;
+  left: 4px; }
 
 main {
   line-height: 1.6; }

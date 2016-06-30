@@ -126,7 +126,7 @@ main {
   }
   span {
     padding: 4px 10px;
-    background: url("/img/sprite.view.svg") no-repeat 39.13043% 93.6%;
+    background: url("../img/sprite.view.svg") no-repeat 39.13043% 93.6%;
   }
   h3, h4 {
     margin: 0;
@@ -364,9 +364,6 @@ main {
       h4 {
         font-size: 1rem;
       }
-    }
-    i {
-      background-position: 0 -4932px;
     }
   }
 }

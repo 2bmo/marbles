@@ -76,7 +76,8 @@
       top: 24px; } }
 
 .footer {
-  margin-top: 100px; }
+  margin-top: 100px;
+  overflow: auto; }
   .footer h3 {
     font: 900 1.8rem "Lato-Bold", sans-serif;
     line-height: 1;
@@ -278,7 +279,7 @@ main {
     font-size: .8rem; }
   .inst span {
     padding: 4px 10px;
-    background: url("/img/sprite.view.svg") no-repeat 39.13043% 93.6%; }
+    background: url("../img/sprite.view.svg") no-repeat 39.13043% 93.6%; }
   .inst h3, .inst h4 {
     margin: 0; }
   .inst h3 {
@@ -446,6 +447,4 @@ main {
       .inst div h3 {
         font-size: 1.4rem; }
       .inst div h4 {
-        font-size: 1rem; }
-    .inst i {
-      background-position: 0 -4932px; } }
+        font-size: 1rem; } }

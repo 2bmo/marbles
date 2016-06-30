@@ -83,6 +83,13 @@
   -webkit-background-clip: text;
   color: transparent; }
 
+.cube-wrap {
+  position: absolute;
+  z-index: -1;
+  width: calc(100% - 8px);
+  top: 0;
+  left: 4px; }
+
 body {
   margin: 0;
   padding: 0;
@@ -90,7 +97,7 @@ body {
   min-width: 320px;
   border: solid 4px #E0BB77;
   text-align: center;
-  background: url("../img/cube.png") no-repeat left 580px #282828;
+  background: #282828;
   color: #969696;
   cursor: default;
   font: 300 1.2rem 'Lato', sans-serif;
@@ -141,20 +148,14 @@ h1 {
   font-weight: 900; }
 
 @media (max-width: 860px) {
-  body {
-    background-position: -80px 640px; }
   main div {
     width: 600px; } }
 
 @media (max-width: 670px) {
-  body {
-    background-position: -180px 660px; }
   main div {
     width: 508px; } }
 
 @media (max-width: 579px) {
-  body {
-    background-position: -220px 700px; }
   .header {
     margin-bottom: 180px; }
   main {
@@ -163,8 +164,6 @@ h1 {
       width: 408px; } }
 
 @media (max-width: 450px) {
-  body {
-    background-position: -280px 700px; }
   .header {
     margin-bottom: 100px; }
   main div {

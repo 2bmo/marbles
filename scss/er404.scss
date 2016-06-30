@@ -34,11 +34,18 @@
 .webkit-h1 {
   @include webkit-h1;
 }
+.cube-wrap {
+  position: absolute;
+  z-index: -1;
+  width: calc(100% - 8px);
+  top: 0;
+  left: 4px;
+}
 body {
   @include main;
   @include border(4px);
   text-align: center;
-  background: url("../img/cube.png") no-repeat left 580px $dark;
+  background: $dark;
   color: $grey;
   cursor: default;
   font: 300 1.2rem 'Lato', sans-serif;
@@ -85,25 +92,16 @@ h1 {
   font-weight: 900;
 }
 @include breakpoint($w860) {
-  body {
-    background-position:  -80px 640px;
-  }
   main div {
     width: 600px;
   }
 }
 @include breakpoint($w670) {
-  body {
-    background-position:  -180px 660px;
-  }
   main div {
     width: 508px;
   }
 }
 @include breakpoint($w579) {
-  body {
-    background-position: -220px 700px;
-  }
   .header {
     margin-bottom: 180px;
   }
@@ -115,9 +113,6 @@ h1 {
   }
 }
 @include breakpoint($w450) {
-  body {
-    background-position: -280px 700px;
-  }
   .header {
     margin-bottom: 100px;
   }

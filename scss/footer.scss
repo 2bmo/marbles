@@ -1,6 +1,7 @@
 @import "../scss/mixed.scss";
 .footer {
   margin-top: 100px;
+  overflow: auto;
   h3 {
     font: 900 1.8rem "Lato-Bold", sans-serif;
     line-height: 1;
