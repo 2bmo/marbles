@@ -38,8 +38,8 @@
   position: absolute;
   z-index: -1;
   width: calc(100% - 8px);
-  top: 0;
-  left: 4px;
+  top: -100px;
+  left: -20%;
 }
 body {
   @include main;
